@@ -1,5 +1,6 @@
 package com.example.stulog
 
+import android.R
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -48,11 +49,27 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+//@Composable
+//fun MainNavigation() {
+//    NavigationBar(
+//        icon = { Icon(Icons.Filled.Home, contentDescription = null) },
+//        label = { Text("Home") },
+//        selected = true,
+//        onClick = {},
+//        modifier = TODO(),
+//        containerColor = TODO(),
+//        contentColor = TODO(),
+//        tonalElevation = TODO(),
+//        windowInsets = TODO(),
+//        content = TODO()
+//    )
+//}
+
 sealed class Screen(val route: String, val title: String, val icon: Int) {
-    object Home : Screen("home", "Home", android.R.drawable.ic_menu_gallery)
-    object Search : Screen("search", "Search", android.R.drawable.ic_menu_search)
-    object Notifications : Screen("notifications", "Notifications", android.R.drawable.ic_menu_agenda)
-    object Profile : Screen("profile", "Profile", android.R.drawable.ic_menu_my_calendar)
+    object Home : Screen("home", "Home", R.drawable.ic_menu_gallery)
+    object Search : Screen("search", "Search", R.drawable.ic_menu_search)
+    object Notifications : Screen("notifications", "Notifications", R.drawable.ic_menu_agenda)
+    object Profile : Screen("profile", "Profile", R.drawable.ic_menu_my_calendar)
 }
 
 @Composable

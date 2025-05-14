@@ -60,6 +60,11 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.navigation:navigation-compose:2.7.5")
     implementation("androidx.compose.material:material-icons-extended:1.6.0")
+    implementation("androidx.compose.material3:material3:1.1.2")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
+    implementation("androidx.compose.material3:material3:1.2.0") // or latest stable
+
+
 
     // Navigation Compose
     implementation("androidx.navigation:navigation-compose:2.7.5")
