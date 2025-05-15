@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.stulog"
+    namespace = "com.example.stulog_android_app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.stulog"
+        applicationId = "com.example.stulog_android_app"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35b91c0c-5ff0-4240-ac3b-30e999a897f2" name="Changes" comment="" />
+    <list default="true" id="26c75815-8d1c-45dc-a0cf-c167e8dbe2ec" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,72 +24,26 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Kotlin File" />
-        <option value="Kotlin JUnit5 Test Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;NithyaLavSetlur&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/NithyaLavSetlur/StuLog-Android-App.git&quot;,
-    &quot;accountId&quot;: &quot;b50f87ad-3b0c-4243-be66-3136fe8112b6&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2vR54CsWl1QjbdvjWWzfsLVwQwG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectReloadState">
-    <option name="STATE" value="1" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2x8B51nxkKZa6JucnQ5yddD4USt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/nithy/AndroidStudioProjects/StuLog/app/src/test/java/com/example/stulog&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nithy/AndroidStudioProjects/StuLog&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;io.github.pandier.intellijdiscordrp.settings.DiscordSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.example.stulog" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="StuLog.app" />
+      <module name="StuLog-Android-App.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -164,25 +118,25 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="35b91c0c-5ff0-4240-ac3b-30e999a897f2" name="Changes" comment="" />
-      <created>1744094854362</created>
+      <changelist id="26c75815-8d1c-45dc-a0cf-c167e8dbe2ec" name="Changes" comment="" />
+      <created>1747309634381</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1744094854362</updated>
+      <updated>1747309634381</updated>
     </task>
     <servers />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
-        <entry key="com.example.stulog">
+        <entry key="com.example.stulog_android_app">
           <value>
-            <CheckInfo lastCheckTimestamp="1747134873655" />
+            <CheckInfo lastCheckTimestamp="1747309863353" />
           </value>
         </entry>
-        <entry key="com.example.stulog.test">
+        <entry key="com.example.stulog_android_app.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1747134873654" />
+            <CheckInfo lastCheckTimestamp="1747309863353" />
           </value>
         </entry>
       </map>

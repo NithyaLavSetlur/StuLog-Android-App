@@ -1,4 +1,4 @@
-package com.example.stulog
+package com.example.stulog_android_app
 
 import org.junit.Test
 

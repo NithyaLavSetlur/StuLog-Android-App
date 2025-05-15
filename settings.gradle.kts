@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "StuLog"
+rootProject.name = "StuLog-Android-App"
 include(":app")
+ 

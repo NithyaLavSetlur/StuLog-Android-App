@@ -1,4 +1,4 @@
-package com.example.stulog
+package com.example.stulog_android_app
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,7 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.stulog.databinding.ActivityMainBinding
+import com.example.stulog_android_app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
