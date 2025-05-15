@@ -1,4 +1,0 @@
-C:\Users\nithy\AndroidStudioProjects\StuLog\app\src\main\java\com\example\stulog\ui\theme\Color.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog\app\src\main\java\com\example\stulog\ui\theme\Theme.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog\app\src\main\java\com\example\stulog\MainActivity.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog\app\src\main\java\com\example\stulog\ui\theme\Type.kt
