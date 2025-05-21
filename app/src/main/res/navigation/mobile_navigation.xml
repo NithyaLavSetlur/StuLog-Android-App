@@ -5,21 +5,19 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+<!--Home Page -->
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.stulogandroidapp.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
+<!--Add Task Page - Still need to replace with proper file/variable names etc -->
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.stulogandroidapp.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_"
         android:name="com.example.stulogandroidapp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+
 </navigation>
