@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.stulogandroidapp.auth.SignInFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.stulogandroidapp.auth.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_sign_up" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.stulogandroidapp.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <!-- Add other actions here -->
+    </fragment>
+</navigation>

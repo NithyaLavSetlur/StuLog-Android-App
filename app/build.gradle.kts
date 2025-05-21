@@ -36,6 +36,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 
@@ -51,31 +52,23 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
 
-    // Import the Firebase BoM
-    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
+    // Navigation components
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
-    // TODO: Add the dependencies for Firebase products you want to use
-    // When using the BoM, don't specify versions in Firebase dependencies
-    implementation("com.google.firebase:firebase-analytics")
-
-    // Add the dependencies for any other desired Firebase products
-    // https://firebase.google.com/docs/android/setup#available-libraries
-
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
-
-    // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
+    // Firebase for authentication and database
+    implementation(platform("com.google.firebase:firebase-bom:31.2.0"))
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-storage-ktx")
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    // ViewModel and LiveData
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
+
+    // Image loading
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+
+    // Material design
+    implementation("com.google.android.material:material:1.8.0")
 }

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.stulogandroidapp-mergeDebugResources-56:/values-port/values-port.xml",
+            "outputFile": "com.example.stulogandroidapp-mergeDebugResources-54:/values-port/values-port.xml",
             "map": [
                 {
                     "source": "C:\\Users\\nithy\\.gradle\\caches\\8.11.1\\transforms\\05858e1a9cc462432977daa5d2ddf87f\\transformed\\appcompat-1.7.0\\res\\values-port\\values-port.xml",

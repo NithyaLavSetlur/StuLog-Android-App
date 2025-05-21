@@ -1,118 +1,106 @@
 [
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-56:/layout_fragment_sign_in.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/layout/fragment_sign_in.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\layout_fragment_addtask.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\layout\\fragment_addtask.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/layout_activity_main.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-56:/drawable_ic_add.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/drawable/ic_add.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-xxxhdpi_app_icon_foreground.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-xxxhdpi/app_icon_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\layout\\activity_main.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-xhdpi_app_icon_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-xhdpi/app_icon_round.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\layout_fragment_notifications.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\layout\\fragment_notifications.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-hdpi_app_icon.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-hdpi/app_icon.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-xhdpi_app_icon_foreground.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-xhdpi/app_icon_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\layout_fragment_tasklist.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\layout\\fragment_tasklist.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-mdpi_app_icon_foreground.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-mdpi/app_icon_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\navigation_mobile_navigation.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\navigation\\mobile_navigation.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/layout_fragment_task.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/layout/fragment_task.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\layout_fragment_dashboard.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\layout\\fragment_dashboard.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-hdpi_app_icon_foreground.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-hdpi/app_icon_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\xml\\backup_rules.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/navigation_nav_graph.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/navigation/nav_graph.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-anydpi-v26_app_icon.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-anydpi-v26/app_icon.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-xhdpi_app_icon.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-xhdpi/app_icon.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-anydpi-v26_app_icon_round.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-anydpi-v26/app_icon_round.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\layout\\fragment_home.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/layout_item_task.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/layout/item_task.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-xxxhdpi_app_icon_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-xxxhdpi/app_icon_round.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-xxhdpi_app_icon_foreground.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-xxhdpi/app_icon_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.stulogandroidapp-debug-56:/xml_backup_rules.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-mdpi_app_icon.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-mdpi/app_icon.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-mdpi_app_icon_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-mdpi/app_icon_round.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-hdpi_app_icon_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-hdpi/app_icon_round.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\drawable_ic_home_black_24dp.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\drawable\\ic_home_black_24dp.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/layout_fragment_home.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\drawable\\ic_notifications_black_24dp.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-xxhdpi_app_icon.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-xxhdpi/app_icon.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\drawable_ic_dashboard_black_24dp.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\drawable\\ic_dashboard_black_24dp.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-xxxhdpi_app_icon.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-xxxhdpi/app_icon.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-58:/layout_activity_main.xml.flat",
-        "source": "com.example.stulogandroidapp-main-60:/layout/activity_main.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/mipmap-xxhdpi_app_icon_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-58:/mipmap-xxhdpi/app_icon_round.webp"
     },
     {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\layout_fragment_clock.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\layout\\fragment_clock.xml"
-    },
-    {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-debug-58:\\menu_bottom_nav_menu.xml.flat",
-        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-60:\\menu\\bottom_nav_menu.xml"
+        "merged": "com.example.stulogandroidapp-debug-56:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.stulogandroidapp-main-58:/xml/data_extraction_rules.xml"
     }
 ]
