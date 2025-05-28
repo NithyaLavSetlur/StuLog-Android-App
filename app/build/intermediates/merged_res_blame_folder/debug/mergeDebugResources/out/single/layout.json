@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-mergeDebugResources-46:\\layout\\fragment_notifications.xml",
+        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-49:\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-mergeDebugResources-46:\\layout\\item_subject_page.xml",
+        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-49:\\layout\\item_subject_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-mergeDebugResources-46:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-49:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-mergeDebugResources-46:\\layout\\item_task.xml",
+        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-49:\\layout\\item_task.xml"
+    },
+    {
+        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-mergeDebugResources-46:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-49:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "com.example.stulogandroidapp-mergeDebugResources-46:/layout/fragment_home.xml",
+        "source": "com.example.stulogandroidapp-main-49:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-mergeDebugResources-46:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\nithy\\.gradle\\daemon\\8.11.1\\com.example.stulogandroidapp-main-49:\\layout\\activity_main.xml"
+    }
+]
