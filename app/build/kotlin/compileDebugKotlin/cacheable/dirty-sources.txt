@@ -1,9 +1,0 @@
-C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\src\main\java\MainActivity.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\src\main\java\fragments\HomeFragment.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\src\main\java\models\Task.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\src\main\java\auth\SignUpFragment.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\src\main\java\fragments\TaskFragment.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\src\main\java\auth\SignInFragment.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\src\main\java\adapters\TaskAdapter.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\src\main\java\viewmodels\HomeViewModel.kt
-C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\src\main\java\models\Subject.kt

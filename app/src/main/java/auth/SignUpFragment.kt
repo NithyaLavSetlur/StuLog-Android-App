@@ -1,4 +1,0 @@
-package auth
-
-class SignUpFragment {
-}
