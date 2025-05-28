@@ -28,15 +28,43 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        // Set greeting dynamically
+        binding.textGreeting.text = "Good Morning, User!"
+        binding.textInspirational.text = "\"Inspirational!\""
+
+        // Setup click listeners
+        binding.btnAddSubject.setOnClickListener {
+            // Show dialog to add new subject (you can use AlertDialog)
         }
+
+        binding.btnDown.setOnClickListener {
+            // Scroll to subject list
+        }
+
+        binding.btnUp.setOnClickListener {
+            // Scroll to top
+        }
+
+        binding.btnDetails.setOnClickListener {
+            // Navigate to detailed view (maybe a new fragment/activity)
+        }
+        
+
         return root
+
+        val subjects = listOf(
+            Subject("Math", listOf("Task 1", "Task 2")),
+            Subject("Science", listOf("Read chapter 5", "Lab report")),
+            Subject("English", listOf("Essay draft", "Poem analysis"))
+        )
+        binding.viewPagerSubjects.adapter = SubjectPagerAdapter(subjects)
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

@@ -3266,6 +3266,10 @@ int id bounce 0x7f080062
 int id bounceBoth 0x7f080063
 int id bounceEnd 0x7f080064
 int id bounceStart 0x7f080065
+int id btnAddSubject 0x7f08020d
+int id btnDetails 0x7f08020e
+int id btnDown 0x7f08020f
+int id btnUp 0x7f080210
 int id buttonPanel 0x7f080066
 int id cache_measures 0x7f080067
 int id callMeasure 0x7f080068
@@ -3381,6 +3385,7 @@ int id hide_ime_id 0x7f0800d5
 int id hideable 0x7f0800d6
 int id home 0x7f0800d7
 int id homeAsUp 0x7f0800d8
+int id homeLayout 0x7f080211
 int id honorRequest 0x7f0800d9
 int id horizontal 0x7f0800da
 int id horizontal_only 0x7f0800db
@@ -3390,6 +3395,7 @@ int id ifRoom 0x7f0800de
 int id ignore 0x7f0800df
 int id ignoreRequest 0x7f0800e0
 int id image 0x7f0800e1
+int id imgGraphic 0x7f080212
 int id immediateStop 0x7f0800e2
 int id included 0x7f0800e3
 int id indeterminate 0x7f0800e4
@@ -3607,6 +3613,8 @@ int id staticLayout 0x7f0801b7
 int id staticPostLayout 0x7f0801b8
 int id stop 0x7f0801b9
 int id stretch 0x7f0801ba
+int id subjectListLayout 0x7f080213
+int id subjectTitle 0x7f080214
 int id submenuarrow 0x7f0801bb
 int id submit_area 0x7f0801bc
 int id supportScrollUp 0x7f0801bd
@@ -3626,15 +3634,18 @@ int id tag_transition_group 0x7f0801ca
 int id tag_unhandled_key_event_manager 0x7f0801cb
 int id tag_unhandled_key_listeners 0x7f0801cc
 int id tag_window_insets_animation_callback 0x7f0801cd
+int id taskRecycler 0x7f080215
+int id taskText 0x7f080216
 int id text 0x7f0801ce
 int id text2 0x7f0801cf
 int id textEnd 0x7f0801d0
+int id textGreeting 0x7f080217
+int id textInspirational 0x7f080218
 int id textSpacerNoButtons 0x7f0801d1
 int id textSpacerNoTitle 0x7f0801d2
 int id textStart 0x7f0801d3
 int id textTop 0x7f0801d4
 int id text_dashboard 0x7f0801d5
-int id text_home 0x7f0801d6
 int id text_input_end_icon 0x7f0801d7
 int id text_input_error_icon 0x7f0801d8
 int id text_input_start_icon 0x7f0801d9
@@ -3671,6 +3682,7 @@ int id up 0x7f0801f7
 int id useLogo 0x7f0801f8
 int id vertical 0x7f0801f9
 int id vertical_only 0x7f0801fa
+int id viewPagerSubjects 0x7f080219
 int id view_offset_helper 0x7f0801fb
 int id view_transition 0x7f0801fc
 int id view_tree_disjoint_parent 0x7f0801fd
@@ -3826,6 +3838,8 @@ int layout fragment_home 0x7f0b002e
 int layout fragment_notifications 0x7f0b002f
 int layout ime_base_split_test_activity 0x7f0b0030
 int layout ime_secondary_split_test_activity 0x7f0b0031
+int layout item_subject_page 0x7f0b006f
+int layout item_task 0x7f0b0070
 int layout m3_alert_dialog 0x7f0b0032
 int layout m3_alert_dialog_actions 0x7f0b0033
 int layout m3_alert_dialog_title 0x7f0b0034

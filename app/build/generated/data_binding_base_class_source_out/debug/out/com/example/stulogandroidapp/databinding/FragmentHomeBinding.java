@@ -4,12 +4,16 @@ package com.example.stulogandroidapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import androidx.viewpager2.widget.ViewPager2;
 import com.example.stulogandroidapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -17,19 +21,59 @@ import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final TextView textHome;
+  public final ImageButton btnAddSubject;
 
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textHome) {
+  @NonNull
+  public final Button btnDetails;
+
+  @NonNull
+  public final Button btnDown;
+
+  @NonNull
+  public final Button btnUp;
+
+  @NonNull
+  public final LinearLayout homeLayout;
+
+  @NonNull
+  public final ImageView imgGraphic;
+
+  @NonNull
+  public final LinearLayout subjectListLayout;
+
+  @NonNull
+  public final TextView textGreeting;
+
+  @NonNull
+  public final TextView textInspirational;
+
+  @NonNull
+  public final ViewPager2 viewPagerSubjects;
+
+  private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnAddSubject,
+      @NonNull Button btnDetails, @NonNull Button btnDown, @NonNull Button btnUp,
+      @NonNull LinearLayout homeLayout, @NonNull ImageView imgGraphic,
+      @NonNull LinearLayout subjectListLayout, @NonNull TextView textGreeting,
+      @NonNull TextView textInspirational, @NonNull ViewPager2 viewPagerSubjects) {
     this.rootView = rootView;
-    this.textHome = textHome;
+    this.btnAddSubject = btnAddSubject;
+    this.btnDetails = btnDetails;
+    this.btnDown = btnDown;
+    this.btnUp = btnUp;
+    this.homeLayout = homeLayout;
+    this.imgGraphic = imgGraphic;
+    this.subjectListLayout = subjectListLayout;
+    this.textGreeting = textGreeting;
+    this.textInspirational = textInspirational;
+    this.viewPagerSubjects = viewPagerSubjects;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +98,65 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.text_home;
-      TextView textHome = ViewBindings.findChildViewById(rootView, id);
-      if (textHome == null) {
+      id = R.id.btnAddSubject;
+      ImageButton btnAddSubject = ViewBindings.findChildViewById(rootView, id);
+      if (btnAddSubject == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, textHome);
+      id = R.id.btnDetails;
+      Button btnDetails = ViewBindings.findChildViewById(rootView, id);
+      if (btnDetails == null) {
+        break missingId;
+      }
+
+      id = R.id.btnDown;
+      Button btnDown = ViewBindings.findChildViewById(rootView, id);
+      if (btnDown == null) {
+        break missingId;
+      }
+
+      id = R.id.btnUp;
+      Button btnUp = ViewBindings.findChildViewById(rootView, id);
+      if (btnUp == null) {
+        break missingId;
+      }
+
+      LinearLayout homeLayout = (LinearLayout) rootView;
+
+      id = R.id.imgGraphic;
+      ImageView imgGraphic = ViewBindings.findChildViewById(rootView, id);
+      if (imgGraphic == null) {
+        break missingId;
+      }
+
+      id = R.id.subjectListLayout;
+      LinearLayout subjectListLayout = ViewBindings.findChildViewById(rootView, id);
+      if (subjectListLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.textGreeting;
+      TextView textGreeting = ViewBindings.findChildViewById(rootView, id);
+      if (textGreeting == null) {
+        break missingId;
+      }
+
+      id = R.id.textInspirational;
+      TextView textInspirational = ViewBindings.findChildViewById(rootView, id);
+      if (textInspirational == null) {
+        break missingId;
+      }
+
+      id = R.id.viewPagerSubjects;
+      ViewPager2 viewPagerSubjects = ViewBindings.findChildViewById(rootView, id);
+      if (viewPagerSubjects == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((LinearLayout) rootView, btnAddSubject, btnDetails, btnDown,
+          btnUp, homeLayout, imgGraphic, subjectListLayout, textGreeting, textInspirational,
+          viewPagerSubjects);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
