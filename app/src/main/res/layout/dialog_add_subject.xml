@@ -12,5 +12,13 @@
         android:hint="Subject Name"
         android:inputType="text"/>
 
-    <!-- TODO: Add color picker here -->
+    <Button
+        android:id="@+id/colorPickerButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Pick Color"
+        android:background="@drawable/circle_background"/> <!-- circle background for the button -->
+
 </LinearLayout>

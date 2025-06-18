@@ -4,6 +4,7 @@ package com.example.stulogandroidapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
@@ -20,10 +21,15 @@ public final class DialogAddSubjectBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final Button colorPickerButton;
+
+  @NonNull
   public final EditText etSubjectName;
 
-  private DialogAddSubjectBinding(@NonNull LinearLayout rootView, @NonNull EditText etSubjectName) {
+  private DialogAddSubjectBinding(@NonNull LinearLayout rootView, @NonNull Button colorPickerButton,
+      @NonNull EditText etSubjectName) {
     this.rootView = rootView;
+    this.colorPickerButton = colorPickerButton;
     this.etSubjectName = etSubjectName;
   }
 
@@ -54,13 +60,19 @@ public final class DialogAddSubjectBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.colorPickerButton;
+      Button colorPickerButton = ViewBindings.findChildViewById(rootView, id);
+      if (colorPickerButton == null) {
+        break missingId;
+      }
+
       id = R.id.etSubjectName;
       EditText etSubjectName = ViewBindings.findChildViewById(rootView, id);
       if (etSubjectName == null) {
         break missingId;
       }
 
-      return new DialogAddSubjectBinding((LinearLayout) rootView, etSubjectName);
+      return new DialogAddSubjectBinding((LinearLayout) rootView, colorPickerButton, etSubjectName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

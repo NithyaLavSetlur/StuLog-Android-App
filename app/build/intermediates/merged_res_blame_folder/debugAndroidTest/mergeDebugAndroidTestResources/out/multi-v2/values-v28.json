@@ -4,7 +4,7 @@
             "outputFile": "com.example.stulogandroidapp.test.app-mergeDebugAndroidTestResources-3:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\nithy\\.gradle\\caches\\8.11.1\\transforms\\380db23a51ac6d08362692d2a2b2221f\\transformed\\core-1.6.1\\res\\values-v28\\values.xml",
+                    "source": "C:\\Users\\nithy\\.gradle\\caches\\8.11.1\\transforms\\4d686e82343f37a92c90c8d391e3b248\\transformed\\core-1.6.1\\res\\values-v28\\values.xml",
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",

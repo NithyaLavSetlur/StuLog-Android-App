@@ -1,118 +1,146 @@
 [
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_ic_home_black_24dp.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/ic_home_black_24dp.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/layout_fragment_notifications.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/layout/fragment_notifications.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/layout_item_task.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/layout/item_task.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/layout_item_subject_page.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/layout/item_subject_page.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/drawable_ic_home_black_24dp.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/drawable/ic_home_black_24dp.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/drawable_ic_dashboard_black_24dp.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/drawable/ic_dashboard_black_24dp.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/layout_item_subject_page.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/layout/item_subject_page.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/layout_fragment_dashboard.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/layout/fragment_dashboard.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/drawable/ic_notifications_black_24dp.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/layout_dialog_add_subject.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/layout/dialog_add_subject.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/layout_dialog_add_subject.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/layout/dialog_add_subject.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/drawable/ic_launcher_background.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/xml_backup_rules.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/navigation_mobile_navigation.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/navigation/mobile_navigation.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_cup_background.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/cup_background.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/xml/data_extraction_rules.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/layout_dialog_edit_subject.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/layout/dialog_edit_subject.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_circle_background.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/circle_background.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/layout_fragment_home.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/layout/fragment_home.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/layout_fragment_home.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/layout_fragment_notifications.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/layout/fragment_notifications.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/menu/bottom_nav_menu.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/layout_item_subject_cup.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/layout/item_subject_cup.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/layout_fragment_dashboard.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/layout/fragment_dashboard.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_coffee_cup.png.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/coffee_cup.png"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.stulogandroidapp-main-55:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_ic_delete.png.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/ic_delete.png"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/navigation_mobile_navigation.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/navigation/mobile_navigation.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/layout_item_task.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/layout/item_task.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/layout_activity_main.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/layout/activity_main.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.stulogandroidapp-debug-53:/xml_backup_rules.xml.flat",
-        "source": "com.example.stulogandroidapp-main-55:/xml/backup_rules.xml"
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.stulogandroidapp-debug-58:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.stulogandroidapp-debug-58:/layout_item_subject_cup.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/layout/item_subject_cup.xml"
+    },
+    {
+        "merged": "com.example.stulogandroidapp-debug-58:/layout_activity_main.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.stulogandroidapp-debug-58:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.stulogandroidapp-main-60:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_ic_edit.png.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/ic_edit.png"
+    },
+    {
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.stulogandroidapp-debug-58:/drawable_cup_with_background.xml.flat",
+        "source": "com.example.stulogandroidapp-main-60:/drawable/cup_with_background.xml"
     }
 ]

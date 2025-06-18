@@ -31,6 +31,8 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Бөлісу"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> қолданбасымен бөлісу"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Жию"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Құпия сөз"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Кіру кілті"</string>
     <string name="bottomsheet_action_collapse">Төменгі парақшаны жию</string>
     <string name="bottomsheet_action_expand">Төменгі парақшаны жаю</string>
     <string name="bottomsheet_action_expand_halfway">Жартылай кеңейту</string>
@@ -64,9 +66,13 @@
     <string name="common_open_on_phone">Телефонда ашу</string>
     <string name="common_signin_button_text">Кіру</string>
     <string name="common_signin_button_text_long">Google арқылы кіру</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Сілтеме буферге көшірілді."</string>
     <string name="error_a11y_label">Қате: жарамсыз</string>
     <string name="error_icon_content_description">Қате</string>
     <string name="exposed_dropdown_menu_content_description">Ашылмалы мәзірді көрсету</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Сілтемені көшіру"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Браузерден ашу"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Сілтемені бөлісу"</string>
     <string name="icon_content_description">Диалог белгішесі</string>
     <string name="item_view_role_description">Қойынды</string>
     <string name="material_clock_toggle_content_description">\"AM\" немесе \"PM\" форматын таңдау</string>

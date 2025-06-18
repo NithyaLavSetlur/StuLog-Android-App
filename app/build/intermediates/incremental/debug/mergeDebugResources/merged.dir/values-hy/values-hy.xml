@@ -31,6 +31,8 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Կիսվել…"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Կիսվել <ns1:g id="APPLICATION_NAME">%s</ns1:g> հավելվածի միջոցով"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Ծալել"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Գաղտնաբառ"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Անցաբառ"</string>
     <string name="bottomsheet_action_collapse">Ծալել ներքևի էկրանը</string>
     <string name="bottomsheet_action_expand">Ծավալել ներքևի էկրանը</string>
     <string name="bottomsheet_action_expand_halfway">Ծավալել կիսով չափ</string>
@@ -64,9 +66,13 @@
     <string name="common_open_on_phone">Բացել հեռախոսով</string>
     <string name="common_signin_button_text">Մուտք գործել</string>
     <string name="common_signin_button_text_long">Մուտք գործել Google-ով</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Հղումը պատճենվեց սեղմատախտակին"</string>
     <string name="error_a11y_label">Սխալ՝ անվավեր է</string>
     <string name="error_icon_content_description">Սխալ</string>
     <string name="exposed_dropdown_menu_content_description">Ցույց տալ իջնող ընտրացանկը</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Պատճենել հղումը"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Բացել դիտարկիչում"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Կիսվել հղումով"</string>
     <string name="icon_content_description">Երկխոսության պատուհանի պատկերակ</string>
     <string name="item_view_role_description">Ներդիր</string>
     <string name="material_clock_toggle_content_description">Ընտրել AM կամ PM</string>

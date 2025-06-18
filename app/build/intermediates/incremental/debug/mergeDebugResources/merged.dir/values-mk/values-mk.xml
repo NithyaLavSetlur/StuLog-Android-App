@@ -31,6 +31,8 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Сподели со"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Сподели со <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Собери"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Лозинка"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Криптографски клуч"</string>
     <string name="bottomsheet_action_collapse">Соберете го долниот лист</string>
     <string name="bottomsheet_action_expand">Проширете го долниот лист</string>
     <string name="bottomsheet_action_expand_halfway">Прошири до половина</string>
@@ -64,9 +66,13 @@
     <string name="common_open_on_phone">Отвори на телефонот</string>
     <string name="common_signin_button_text">Најави се</string>
     <string name="common_signin_button_text_long">Најави се со Google</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Линкот е копиран во привремена меморија"</string>
     <string name="error_a11y_label">Грешка: неважечко</string>
     <string name="error_icon_content_description">Грешка</string>
     <string name="exposed_dropdown_menu_content_description">Прикажи паѓачко мени</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Копирај го линкот"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Отвори во прелистувач"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Сподели линк"</string>
     <string name="icon_content_description">Икона за дијалог</string>
     <string name="item_view_role_description">Картичка</string>
     <string name="material_clock_toggle_content_description">Изберете претпладне или попладне</string>

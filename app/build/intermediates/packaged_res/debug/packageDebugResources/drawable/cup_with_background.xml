@@ -1,0 +1,7 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Orange background (comes first = bottom layer) -->
+    <item android:drawable="@drawable/cup_background"/>
+
+    <!-- Your coffee cup PNG (top layer) -->
+    <item android:drawable="@drawable/coffee_cup"/>
+</layer-list>

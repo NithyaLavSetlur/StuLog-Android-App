@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="StuLog">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-06-17T10:00:22.009516900Z">
+        <DropdownSelection timestamp="2025-06-18T07:24:38.449364100Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\nithy\.android\avd\Medium_Phone.avd" />

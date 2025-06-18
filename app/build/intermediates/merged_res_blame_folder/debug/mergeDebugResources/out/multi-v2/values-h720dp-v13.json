@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.stulogandroidapp-mergeDebugResources-51:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.example.stulogandroidapp-mergeDebugResources-56:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\nithy\\.gradle\\caches\\8.11.1\\transforms\\2dee522eebab3fd537fc1843b074afe5\\transformed\\appcompat-1.7.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\nithy\\.gradle\\caches\\8.11.1\\transforms\\39d4a398ba1e812f7dceac97b6da8e1a\\transformed\\appcompat-1.7.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -31,6 +31,8 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Ndaje me"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Ndaje me <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Palos"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Fjalëkalimi"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Çelësi i kalimit"</string>
     <string name="bottomsheet_action_collapse">Palos fletën e poshtme</string>
     <string name="bottomsheet_action_expand">Zgjero fletën e poshtme</string>
     <string name="bottomsheet_action_expand_halfway">Zgjeroje deri në gjysmë</string>
@@ -64,9 +66,13 @@
     <string name="common_open_on_phone">Hape në telefon</string>
     <string name="common_signin_button_text">Identifikohu</string>
     <string name="common_signin_button_text_long">Identifikohu me Google</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Lidhja u kopjua në kujtesën e fragmenteve"</string>
     <string name="error_a11y_label">Gabim: E pavlefshme</string>
     <string name="error_icon_content_description">Gabim</string>
     <string name="exposed_dropdown_menu_content_description">Shfaq menynë me lëshim poshtë</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopjo lidhjen"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Hape në shfletues"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Ndaj lidhjen"</string>
     <string name="icon_content_description">Ikona e dialogut</string>
     <string name="item_view_role_description">Tab</string>
     <string name="material_clock_toggle_content_description">Zgjidh paradite ose pasdite</string>

@@ -31,6 +31,8 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"გაზიარება:"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>-ით გაზიარება"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"ჩაკეცვა"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"პაროლი"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"წვდომის გასაღები"</string>
     <string name="bottomsheet_action_collapse">ქვედა ფურცლის ჩაკეცვა</string>
     <string name="bottomsheet_action_expand">ქვედა ფურცლის გაშლა</string>
     <string name="bottomsheet_action_expand_halfway">ნახევრამდე გაფართოება</string>
@@ -64,9 +66,13 @@
     <string name="common_open_on_phone">ტელეფონში გახსნა</string>
     <string name="common_signin_button_text">შესვლა</string>
     <string name="common_signin_button_text_long">Google-ით შესვლა</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"გაცვლის ბუფერში კოპირებული ბმული"</string>
     <string name="error_a11y_label">შეცდომა: არასწორი</string>
     <string name="error_icon_content_description">შეცდომა</string>
     <string name="exposed_dropdown_menu_content_description">ჩამოსაშლელი მენიუს ჩვენება</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"ბმულის კოპირება"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"ბრაუზერში გახსნა"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"ბმულის გაზიარება"</string>
     <string name="icon_content_description">დიალოგის ხატულა</string>
     <string name="item_view_role_description">ჩანართი</string>
     <string name="material_clock_toggle_content_description">აირჩიეთ AM ან PM</string>

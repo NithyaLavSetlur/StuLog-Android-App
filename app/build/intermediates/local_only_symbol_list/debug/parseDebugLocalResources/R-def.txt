@@ -9,7 +9,13 @@ color teal_700
 color white
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+drawable circle_background
+drawable coffee_cup
+drawable cup_background
+drawable cup_with_background
 drawable ic_dashboard_black_24dp
+drawable ic_delete
+drawable ic_edit
 drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -18,7 +24,8 @@ id btnAddSubject
 id btnDetails
 id btn_delete_subject
 id btn_edit_subject
-id container
+id colorPickerButton
+id colorPreview
 id cup_view
 id etSubjectName
 id homeLayout
@@ -38,10 +45,12 @@ id textGreeting
 id textInspirational
 id text_dashboard
 id text_notifications
+id tvCurrentColor
 id tv_subject_name
 id viewPagerSubjects
 layout activity_main
 layout dialog_add_subject
+layout dialog_edit_subject
 layout fragment_dashboard
 layout fragment_home
 layout fragment_notifications

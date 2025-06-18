@@ -31,6 +31,8 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Ulashish"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> orqali ulashish"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Yig‘ish"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Parol"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Kod"</string>
     <string name="bottomsheet_action_collapse">Quyi ekranni yigʻish</string>
     <string name="bottomsheet_action_expand">Quyi ekranni kengaytirish</string>
     <string name="bottomsheet_action_expand_halfway">Yarmiga kengaytirish</string>
@@ -64,9 +66,13 @@
     <string name="common_open_on_phone">Telefonda ochish</string>
     <string name="common_signin_button_text">Kirish</string>
     <string name="common_signin_button_text_long">Google orqali kirish</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Havoladan vaqtinchalik xotiraga nusxa olindi"</string>
     <string name="error_a11y_label">Xato: yaroqsiz</string>
     <string name="error_icon_content_description">Xato</string>
     <string name="exposed_dropdown_menu_content_description">Pastga ochiluvchi menyuni ochish</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Havoladan nusxa olish"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Brauzerda ochish"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Havolani ulashish"</string>
     <string name="icon_content_description">Muloqot ikonkasi</string>
     <string name="item_view_role_description">Tab : Varaq</string>
     <string name="material_clock_toggle_content_description">Tushdan oldin yoki keyinligini tanlang</string>

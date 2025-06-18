@@ -1,5 +1,5 @@
-com.example.stulogandroidapp.test.app-tracing-1.2.0-0 C:\Users\nithy\.gradle\caches\8.11.1\transforms\250afbeaeb8f7f613bd9327ede8e8767\transformed\tracing-1.2.0\res
-com.example.stulogandroidapp.test.app-core-1.6.1-1 C:\Users\nithy\.gradle\caches\8.11.1\transforms\380db23a51ac6d08362692d2a2b2221f\transformed\core-1.6.1\res
+com.example.stulogandroidapp.test.app-core-1.6.1-0 C:\Users\nithy\.gradle\caches\8.11.1\transforms\4d686e82343f37a92c90c8d391e3b248\transformed\core-1.6.1\res
+com.example.stulogandroidapp.test.app-tracing-1.2.0-1 C:\Users\nithy\.gradle\caches\8.11.1\transforms\b65db8363a81732664876643345d2f63\transformed\tracing-1.2.0\res
 com.example.stulogandroidapp.test.app-androidTest-2 C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\build\generated\res\resValues\androidTest\debug
 com.example.stulogandroidapp.test.app-mergeDebugAndroidTestResources-3 C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
 com.example.stulogandroidapp.test.app-mergeDebugAndroidTestResources-4 C:\Users\nithy\AndroidStudioProjects\StuLog-Android-App\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
