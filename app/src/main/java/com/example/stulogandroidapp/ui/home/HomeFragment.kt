@@ -7,16 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView //not use yet
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayoutMediator
 import com.example.stulogandroidapp.databinding.FragmentHomeBinding
 import com.example.stulogandroidapp.databinding.DialogAddSubjectBinding
 import com.example.stulogandroidapp.ui.adapters.TaskAdapter
 import com.example.stulogandroidapp.ui.models.Subject
+import com.example.stulogandroidapp.ui.models.Task
 import com.example.stulogandroidapp.ui.adapters.SubjectPagerAdapter
-import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.firestore.FirebaseFirestore
 import com.example.stulogandroidapp.FirestoreHelper
+import android.widget.Toast
+import android.util.Log
 
 data class Subject(
     var id: String = "",
@@ -58,6 +62,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupUI() {
+        val tasks = tasks.map { it.title } // Creates List<String>
+        val adapter = TaskAdapter(tasks)
+
         // Set greeting and quote
         binding.textGreeting.text = "Good Morning, User!"
         binding.textInspirational.text = "\"Inspirational!\""

@@ -1,11 +1,3 @@
-plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    id("kotlin-android")
-    id("com.google.gms.google-services")
-    id("kotlin-parcelize")
-}
-
 android {
     namespace = "com.example.stulogandroidapp"
     compileSdk = 35
@@ -41,6 +33,12 @@ android {
     }
 }
 
+
+dependencies {
+
+}
+
+
 dependencies {
     // Other - not sure what it is yet
     implementation(libs.androidx.core.ktx)
@@ -54,6 +52,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.firebase:firebase-auth-ktx:21.0.1")
 
     // Firebase BoM (Bill of Materials)
     implementation("com.google.firebase:firebase-bom:32.3.1")
@@ -65,4 +68,12 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
 
     implementation("com.google.firebase:firebase-firestore-ktx:25.0.0")
+}
+
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    id("kotlin-android")
+    id("com.google.gms.google-services")
+    id("kotlin-parcelize")
 }

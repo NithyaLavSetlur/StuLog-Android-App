@@ -1,4 +1,4 @@
-package com.yourpackage.models
+package com.example.stulogandroidapp.ui.models
 
 import android.os.Parcelable
 import com.google.firebase.Timestamp

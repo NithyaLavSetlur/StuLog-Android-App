@@ -11,10 +11,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import androidx.viewpager2.widget.ViewPager2;
 import com.example.stulogandroidapp.R;
+import com.google.android.material.tabs.TabLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -30,19 +32,16 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button btnDetails;
 
   @NonNull
-  public final Button btnDown;
-
-  @NonNull
-  public final Button btnUp;
-
-  @NonNull
   public final LinearLayout homeLayout;
 
   @NonNull
   public final ImageView imgGraphic;
 
   @NonNull
-  public final LinearLayout subjectListLayout;
+  public final RecyclerView recyclerViewTasks;
+
+  @NonNull
+  public final TabLayout tabLayoutDots;
 
   @NonNull
   public final TextView textGreeting;
@@ -54,18 +53,17 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final ViewPager2 viewPagerSubjects;
 
   private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnAddSubject,
-      @NonNull Button btnDetails, @NonNull Button btnDown, @NonNull Button btnUp,
-      @NonNull LinearLayout homeLayout, @NonNull ImageView imgGraphic,
-      @NonNull LinearLayout subjectListLayout, @NonNull TextView textGreeting,
-      @NonNull TextView textInspirational, @NonNull ViewPager2 viewPagerSubjects) {
+      @NonNull Button btnDetails, @NonNull LinearLayout homeLayout, @NonNull ImageView imgGraphic,
+      @NonNull RecyclerView recyclerViewTasks, @NonNull TabLayout tabLayoutDots,
+      @NonNull TextView textGreeting, @NonNull TextView textInspirational,
+      @NonNull ViewPager2 viewPagerSubjects) {
     this.rootView = rootView;
     this.btnAddSubject = btnAddSubject;
     this.btnDetails = btnDetails;
-    this.btnDown = btnDown;
-    this.btnUp = btnUp;
     this.homeLayout = homeLayout;
     this.imgGraphic = imgGraphic;
-    this.subjectListLayout = subjectListLayout;
+    this.recyclerViewTasks = recyclerViewTasks;
+    this.tabLayoutDots = tabLayoutDots;
     this.textGreeting = textGreeting;
     this.textInspirational = textInspirational;
     this.viewPagerSubjects = viewPagerSubjects;
@@ -110,18 +108,6 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnDown;
-      Button btnDown = ViewBindings.findChildViewById(rootView, id);
-      if (btnDown == null) {
-        break missingId;
-      }
-
-      id = R.id.btnUp;
-      Button btnUp = ViewBindings.findChildViewById(rootView, id);
-      if (btnUp == null) {
-        break missingId;
-      }
-
       LinearLayout homeLayout = (LinearLayout) rootView;
 
       id = R.id.imgGraphic;
@@ -130,9 +116,15 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.subjectListLayout;
-      LinearLayout subjectListLayout = ViewBindings.findChildViewById(rootView, id);
-      if (subjectListLayout == null) {
+      id = R.id.recyclerViewTasks;
+      RecyclerView recyclerViewTasks = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerViewTasks == null) {
+        break missingId;
+      }
+
+      id = R.id.tabLayoutDots;
+      TabLayout tabLayoutDots = ViewBindings.findChildViewById(rootView, id);
+      if (tabLayoutDots == null) {
         break missingId;
       }
 
@@ -154,8 +146,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((LinearLayout) rootView, btnAddSubject, btnDetails, btnDown,
-          btnUp, homeLayout, imgGraphic, subjectListLayout, textGreeting, textInspirational,
+      return new FragmentHomeBinding((LinearLayout) rootView, btnAddSubject, btnDetails, homeLayout,
+          imgGraphic, recyclerViewTasks, tabLayoutDots, textGreeting, textInspirational,
           viewPagerSubjects);
     }
     String missingId = rootView.getResources().getResourceName(id);

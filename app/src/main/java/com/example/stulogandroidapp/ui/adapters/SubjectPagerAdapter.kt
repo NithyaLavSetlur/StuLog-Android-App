@@ -1,4 +1,4 @@
-package com.example.stulogandroidapp.adapters
+package com.example.stulogandroidapp.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.stulogandroidapp.R
-import com.yourpackage.models.Subject
+import com.example.stulogandroidapp.ui.models.Subject
 
 class SubjectPagerAdapter(
     private val subjects: List<Subject>,

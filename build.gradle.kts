@@ -7,5 +7,18 @@ plugins {
 buildscript {
     dependencies {
         classpath("com.google.gms:google-services:4.3.15")
+        classpath("com.android.tools.build:gradle:7.0.0")
+        classpath("com.google.gms:google-services:4.3.10")
+    }
+    repositories {
+        google()
+        mavenCentral()
     }
 }
+
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//}

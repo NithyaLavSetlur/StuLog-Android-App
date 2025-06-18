@@ -1,4 +1,4 @@
-package com.yourpackage.models
+package com.example.stulogandroidapp.ui.models
 
 import android.graphics.Color
 import com.google.firebase.firestore.Exclude

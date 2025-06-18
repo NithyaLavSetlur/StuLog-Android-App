@@ -54,38 +54,33 @@
         android:layout_height="100dp"
         android:paddingTop="12dp"/>
 
-    <!-- Down Button -->
-    <Button
-        android:id="@+id/btnDown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="down" />
-
-    <!-- Scrollable Subject List -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:contentDescription="List of subjects">
-
-        <LinearLayout
-            android:id="@+id/subjectListLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
-
-    <!-- Up Button -->
-    <Button
-        android:id="@+id/btnUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="up" />
-
     <!-- Details Button -->
     <Button
         android:id="@+id/btnDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Details" />
+
+    <!-- Tab Dots for ViewPager -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="8dp"
+        app:tabIndicatorHeight="0dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/darker_gray" />
+
+    <!-- RecyclerView for tasks -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        tools:listitem="@layout/item_task"
+        android:contentDescription="Recycler View for Tasks" />
 </LinearLayout>
