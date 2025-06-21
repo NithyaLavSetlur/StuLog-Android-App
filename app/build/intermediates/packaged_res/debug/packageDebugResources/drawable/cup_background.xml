@@ -1,5 +1,0 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="#E4B87C"/> <!-- Material Orange 500 -->
-    <corners android:radius="16dp"/> <!-- Adjust corner radius as needed -->
-</shape>

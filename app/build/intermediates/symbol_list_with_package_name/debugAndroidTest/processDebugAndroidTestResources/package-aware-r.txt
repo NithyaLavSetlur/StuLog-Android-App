@@ -1,3 +1,0 @@
-com.example.stulogandroidapp.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme

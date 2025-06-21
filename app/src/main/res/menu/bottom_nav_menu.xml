@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
-
-    <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
-
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <item android:id="@+id/homeFragment" android:title="Home" android:icon="@drawable/ic_home"/>
+    <item android:id="@+id/taskListFragment" android:title="Tasks" android:icon="@drawable/ic_list"/>
+    <item android:id="@+id/addTaskFragment" android:title="Add" android:icon="@drawable/ic_add"/>
+    <item android:id="@+id/clockFragment" android:title="Clock" android:icon="@drawable/ic_clock"/>
 </menu>
