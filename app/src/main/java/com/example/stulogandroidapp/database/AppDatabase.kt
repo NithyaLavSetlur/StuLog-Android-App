@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.stulogandroidapp.models.CompletedTask
 import com.example.stulogandroidapp.models.User
 import com.example.stulogandroidapp.models.Subject
 import com.example.stulogandroidapp.models.Task
@@ -30,3 +31,15 @@ abstract class AppDatabase : RoomDatabase() {
         }
     }
 }
+
+@Database(
+    entities = [User::class, Subject::class, Task::class, CompletedTask::class],
+    version = 1
+)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun subjectDao(): SubjectDao
+    abstract fun taskDao(): TaskDao
+    abstract fun userDao(): UserDao
+    abstract fun completedTaskDao(): CompletedTaskDao  // ✅ ADD THIS
+}
+

@@ -4,4 +4,16 @@
     <fragment android:id="@+id/taskListFragment" android:name="com.example.stulogandroidapp.fragments.SubjectTaskListFragment" />
     <fragment android:id="@+id/addTaskFragment" android:name="com.example.stulogandroidapp.fragments.AddTaskFragment" />
     <fragment android:id="@+id/clockFragment" android:name="com.example.stulogandroidapp.fragments.ClockFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.stulogandroidapp.fragments.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_addTask"
+            app:destination="@id/addTaskFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 </navigation>

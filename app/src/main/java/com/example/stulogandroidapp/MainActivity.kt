@@ -28,6 +28,18 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "StuLog Notifications"
+            val description = "Reminders for upcoming tasks"
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel("stulog_channel", name, importance)
+            channel.description = description
+
+            val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            manager.createNotificationChannel(channel)
+        }
+    }
 }
 
 @Composable
