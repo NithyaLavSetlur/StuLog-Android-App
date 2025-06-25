@@ -1,19 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android">
-    <fragment android:id="@+id/homeFragment" android:name="com.example.stulogandroidapp.fragments.HomeFragment" />
-    <fragment android:id="@+id/taskListFragment" android:name="com.example.stulogandroidapp.fragments.SubjectTaskListFragment" />
-    <fragment android:id="@+id/addTaskFragment" android:name="com.example.stulogandroidapp.fragments.AddTaskFragment" />
-    <fragment android:id="@+id/clockFragment" android:name="com.example.stulogandroidapp.fragments.ClockFragment" />
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.stulogandroidapp.fragments.HomeFragment"
-        tools:layout="@layout/fragment_home">
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.example.stulogandroidapp.fragments.SubjectTaskListFragment"
+        android:label="Task List"
+        tools:layout="@layout/fragment_subject_task_list" />
+
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.example.stulogandroidapp.fragments.AddTaskFragment"
+        android:label="Add Task"
+        tools:layout="@layout/fragment_add_task" />
+
+    <fragment
+        android:id="@+id/clockFragment"
+        android:name="com.example.stulogandroidapp.fragments.ClockFragment"
+        android:label="Clock"
+        tools:layout="@layout/fragment_clock" />
+
+    <fragment
+        android:id="@+id/subjectTaskListFragment"
+        android:name="com.example.stulogandroidapp.fragments.SubjectTaskListFragment"
+        android:label="Subject Task List"
+        tools:layout="@layout/fragment_subject_task_list">
+
         <action
-            android:id="@+id/action_home_to_addTask"
-            app:destination="@id/addTaskFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            android:id="@+id/action_subjectTaskListFragment_to_taskDetailFragment"
+            app:destination="@id/taskDetailFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/taskDetailFragment"
+        android:name="com.example.stulogandroidapp.fragments.TaskDetailFragment"
+        android:label="Task Detail"
+        tools:layout="@layout/fragment_task_detail">
+
+        <argument
+            android:name="taskId"
+            app:argType="integer" />
+    </fragment>
+
 </navigation>

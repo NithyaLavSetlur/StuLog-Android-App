@@ -6,18 +6,25 @@ import com.example.stulogandroidapp.models.Task
 
 @Dao
 interface TaskDao {
-    @Query("SELECT * FROM tasks WHERE subjectId = :subjectId")
-    fun getTasksForSubject(subjectId: Int): LiveData<List<Task>>
 
+    // For SubjectTaskListFragment
+    @Query("SELECT * FROM tasks WHERE subjectId = :subjectId ORDER BY dueDate ASC")
+    fun getTasksBySubject(subjectId: Int): LiveData<List<Task>>
+
+    // For TaskDetailFragment
     @Query("SELECT * FROM tasks WHERE id = :taskId")
-    fun getTaskById(taskId: Int): Task
+    suspend fun getTaskById(taskId: Int): Task
 
-    @Insert
-    fun insert(task: Task)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(task: Task)
 
     @Update
-    fun update(task: Task)
+    suspend fun update(task: Task)
 
     @Delete
-    fun delete(task: Task)
+    suspend fun delete(task: Task)
+
+    // Mark task as complete by ID
+    @Query("UPDATE tasks SET completed = 1 WHERE id = :taskId")
+    suspend fun markComplete(taskId: Int)
 }

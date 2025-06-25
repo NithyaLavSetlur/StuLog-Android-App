@@ -21,7 +21,7 @@ class SubjectTaskListFragment : Fragment() {
     private lateinit var db: AppDatabase
     private lateinit var taskListView: RecyclerView
     private lateinit var adapter: TaskAdapter
-    private var tasks: List<Task> = listOf()
+//    private var tasks: List<Task> = listOf()
     private var subjects: List<Subject> = listOf()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -30,7 +30,7 @@ class SubjectTaskListFragment : Fragment() {
         taskListView = view.findViewById(R.id.taskListRecycler)
         taskListView.layoutManager = LinearLayoutManager(requireContext())
 
-        adapter = TaskAdapter(tasks) { task ->
+        adapter = TaskAdapter(emptyList()) { task ->
             val action = SubjectTaskListFragmentDirections.actionSubjectTaskListFragmentToTaskDetailFragment(task.id)
             findNavController().navigate(action)
         }
@@ -42,7 +42,7 @@ class SubjectTaskListFragment : Fragment() {
 
     private fun showSubjectPopup() {
         lifecycleScope.launch {
-            subjects = db.subjectDao().getAllSubjectsOnce()
+            subjects = db.subjectDao().getAllSubjects() as List<Subject>
             if (subjects.isEmpty()) return@launch
 
             val subjectNames = subjects.map { it.name }.toTypedArray()
@@ -59,9 +59,8 @@ class SubjectTaskListFragment : Fragment() {
     }
 
     private fun loadTasks(subjectId: Int) {
-        lifecycleScope.launch {
-            tasks = db.taskDao().getTasksBySubject(subjectId)
-            adapter.updateTasks(tasks)
+        db.taskDao().getTasksBySubject(subjectId).observe(viewLifecycleOwner) { taskList ->
+            adapter.updateTasks(taskList)
         }
     }
 }

@@ -2,7 +2,8 @@ package com.example.stulogandroidapp.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.stulogandroidapp.R
 
@@ -11,9 +12,11 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        findViewById<View>(R.id.rootWelcome).setOnClickListener {
-            startActivity(Intent(this, SignInActivity::class.java))
+        // Delay for 2 seconds then go to SignInActivity
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
             finish()
-        }
+        }, 2000) // 2000ms = 2 seconds
     }
 }

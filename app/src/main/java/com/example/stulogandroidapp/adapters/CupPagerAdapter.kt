@@ -1,14 +1,17 @@
 package com.example.stulogandroidapp.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.view.*
 import android.widget.*
-import androidx.cardview.widget.CardView
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.example.stulogandroidapp.R
 import com.example.stulogandroidapp.models.Subject
 import com.example.stulogandroidapp.viewmodels.SubjectViewModel
+import com.flask.colorpicker.ColorPickerView
+import com.flask.colorpicker.builder.ColorPickerDialogBuilder
 
 class CupPagerAdapter(
     private val context: Context,
@@ -16,6 +19,7 @@ class CupPagerAdapter(
     private val subjectViewModel: SubjectViewModel
 ) : RecyclerView.Adapter<CupPagerAdapter.CupViewHolder>() {
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateSubjects(newSubjects: List<Subject>) {
         subjects = newSubjects.toMutableList()
         notifyDataSetChanged()
@@ -41,17 +45,39 @@ class CupPagerAdapter(
         }
 
         holder.btnEdit.setOnClickListener {
-            val input = EditText(context)
-            input.setText(subject.name)
-            input.setPadding(20)
+            val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_edit_subject, null)
+            val inputName = dialogView.findViewById<EditText>(R.id.editSubjectName)
+            val colorButton = dialogView.findViewById<Button>(R.id.btnPickColor)
+
+            inputName.setText(subject.name)
+
+            var newColor = subject.color
+            colorButton.setBackgroundColor(Color.parseColor(subject.color))
+
+            colorButton.setOnClickListener {
+                val currentColor = Color.parseColor(subject.color)
+                ColorPickerDialogBuilder
+                    .with(context)
+                    .setTitle("Choose Subject Color")
+                    .initialColor(currentColor)
+                    .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
+                    .density(12)
+                    .setPositiveButton("OK") { _, selectedColor, _ ->
+                        newColor = String.format("#%06X", 0xFFFFFF and selectedColor)
+                        colorButton.setBackgroundColor(selectedColor)
+                    }
+                    .setNegativeButton("Cancel", null)
+                    .build()
+                    .show()
+            }
 
             AlertDialog.Builder(context)
-                .setTitle("Edit Subject Name")
-                .setView(input)
+                .setTitle("Edit Subject")
+                .setView(dialogView)
                 .setPositiveButton("Update") { _, _ ->
-                    val newName = input.text.toString()
+                    val newName = inputName.text.toString()
                     if (newName.isNotEmpty()) {
-                        subjectViewModel.update(subject.copy(name = newName))
+                        subjectViewModel.update(subject.copy(name = newName, color = newColor))
                     }
                 }
                 .setNegativeButton("Cancel", null)

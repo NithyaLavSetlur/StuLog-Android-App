@@ -1,16 +1,21 @@
 package com.example.stulogandroidapp.fragments
 
-import android.app.*
+import android.app.AlarmManager
+import android.app.DatePickerDialog
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.*
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider // where do you plan to use this? (also, what does this library do)
+import androidx.lifecycle.lifecycleScope
 import com.example.stulogandroidapp.R
 import com.example.stulogandroidapp.database.AppDatabase
-import com.example.stulogandroidapp.models.Task
 import com.example.stulogandroidapp.models.Subject
+import com.example.stulogandroidapp.models.Task
+import com.example.stulogandroidapp.notifications.ReminderReceiver
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -73,11 +78,13 @@ class AddTaskFragment : Fragment() {
                 completed = false
             )
 
-            db.taskDao().insert(task)
-            Toast.makeText(requireContext(), "Task added!", Toast.LENGTH_SHORT).show()
+            lifecycleScope.launch {
+                db.taskDao().insert(task)
+                Toast.makeText(requireContext(), "Task added!", Toast.LENGTH_SHORT).show()
 
-            if (notifSwitch.isChecked && selectedDate != null) {
-                scheduleNotification(task.name, selectedDate!!)
+                if (notifSwitch.isChecked && selectedDate != null) {
+                    scheduleNotification(task.name, selectedDate!!)
+                }
             }
         }
 
@@ -104,30 +111,35 @@ class AddTaskFragment : Fragment() {
     private fun showDatePicker() {
         val calendar = Calendar.getInstance()
         val datePicker = DatePickerDialog(requireContext(), { _, year, month, day ->
-            calendar.set(year, month, day, 9, 0) // default time
+            calendar.set(year, month, day, 9, 0)
             selectedDate = calendar.timeInMillis
             val formatter = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
             dateButton.text = formatter.format(Date(selectedDate!!))
             notifSwitch.isEnabled = true
         },
-            calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH))
-
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH)
+        )
         datePicker.show()
     }
 
     private fun scheduleNotification(taskName: String, millis: Long) {
         val intent = Intent(requireContext(), ReminderReceiver::class.java).apply {
-            putExtra("taskName", taskName) // what's wrong here TT
+            putExtra("taskName", taskName)
         }
 
         val pendingIntent = PendingIntent.getBroadcast(
-            requireContext(), millis.toInt(), intent, PendingIntent.FLAG_IMMUTABLE
+            requireContext(),
+            millis.toInt(),
+            intent,
+            PendingIntent.FLAG_IMMUTABLE
         )
 
         val alarmManager = requireContext().getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmManager.setExact( // what is this? I don't think it's compiling
+        alarmManager.setExact(
             AlarmManager.RTC_WAKEUP,
-            millis - 3600000L, // 1 hour before
+            millis - 3600000L,
             pendingIntent
         )
     }

@@ -6,15 +6,19 @@ import com.example.stulogandroidapp.models.Subject
 
 @Dao
 interface SubjectDao {
+
     @Query("SELECT * FROM subjects")
     fun getAllSubjects(): LiveData<List<Subject>>
 
-    @Insert
-    fun insert(subject: Subject)
+    @Query("SELECT * FROM subjects WHERE id = :subjectId")
+    suspend fun getSubjectById(subjectId: Int): Subject
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(subject: Subject)
 
     @Update
-    fun update(subject: Subject)
+    suspend fun update(subject: Subject)
 
     @Delete
-    fun delete(subject: Subject)
+    suspend fun delete(subject: Subject)
 }

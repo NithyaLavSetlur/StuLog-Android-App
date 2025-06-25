@@ -18,7 +18,7 @@ private lateinit var adapter: TaskAdapter
 private var tasks: List<Task> = listOf()
 private var subjects: List<Subject> = listOf()
 
-abstract class TaskAdapter(
+class TaskAdapter(
     private var tasks: List<Task>,
     private val onItemClick: (Task) -> Unit
 ) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {

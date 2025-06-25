@@ -5,9 +5,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.widget.*
-import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.example.stulogandroidapp.R
@@ -15,7 +13,9 @@ import com.example.stulogandroidapp.adapters.CupPagerAdapter
 import com.example.stulogandroidapp.database.AppDatabase
 import com.example.stulogandroidapp.models.Subject
 import com.example.stulogandroidapp.viewmodels.SubjectViewModel
-import yuku.ambilwarna.AmbilWarnaDialog // external color picker lib
+import com.flask.colorpicker.ColorPickerView
+import com.flask.colorpicker.builder.ColorPickerDialogBuilder
+import androidx.core.graphics.toColorInt
 
 class HomeFragment : Fragment() {
 
@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
     private lateinit var adapter: CupPagerAdapter
     private lateinit var db: AppDatabase
     private lateinit var subjectViewModel: SubjectViewModel
-    private var selectedColor = Color.parseColor("#FFA726")
+    private var selectedColor = "#FFA726".toColorInt()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
@@ -55,13 +55,19 @@ class HomeFragment : Fragment() {
         colorPreview.setBackgroundColor(selectedColor)
 
         colorPreview.setOnClickListener {
-            AmbilWarnaDialog(requireContext(), selectedColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
-                override fun onCancel(dialog: AmbilWarnaDialog?) {}
-                override fun onOk(dialog: AmbilWarnaDialog?, color: Int) {
-                    selectedColor = color
-                    colorPreview.setBackgroundColor(color)
+            ColorPickerDialogBuilder
+                .with(requireContext())
+                .setTitle("Pick Subject Color")
+                .initialColor(selectedColor)
+                .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
+                .density(12)
+                .setPositiveButton("OK") { _, selectedColorInt, _ ->
+                    selectedColor = selectedColorInt
+                    colorPreview.setBackgroundColor(selectedColorInt)
                 }
-            }).show()
+                .setNegativeButton("Cancel", null)
+                .build()
+                .show()
         }
 
         AlertDialog.Builder(requireContext())
@@ -70,7 +76,8 @@ class HomeFragment : Fragment() {
             .setPositiveButton("Add") { _, _ ->
                 val name = nameInput.text.toString()
                 if (name.isNotEmpty()) {
-                    subjectViewModel.insert(Subject(name = name, color = String.format("#%06X", 0xFFFFFF and selectedColor)))
+                    val hexColor = String.format("#%06X", 0xFFFFFF and selectedColor)
+                    subjectViewModel.insert(Subject(name = name, color = hexColor))
                 }
             }
             .setNegativeButton("Cancel", null)
