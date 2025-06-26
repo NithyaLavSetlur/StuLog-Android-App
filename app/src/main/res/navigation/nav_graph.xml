@@ -51,4 +51,10 @@
             app:argType="integer" />
     </fragment>
 
+    <fragment
+        android:id="@+id/completedTaskHistoryFragment"
+        android:name="com.example.stulogandroidapp.fragments.CompletedTaskHistoryFragment"
+        android:label="Completed Task History"
+        tools:layout="@layout/fragment_completed_task_history" />
+
 </navigation>

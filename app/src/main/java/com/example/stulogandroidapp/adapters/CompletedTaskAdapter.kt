@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.stulogandroidapp.R
 import com.example.stulogandroidapp.models.CompletedTask
 
-class CompletedTaskAdapter(private var tasks: List<CompletedTask>) :
+class CompletedTaskAdapter(private var tasks: List<CompletedTask> = emptyList()) :
     RecyclerView.Adapter<CompletedTaskAdapter.ViewHolder>() {
 
-    fun updateList(newList: List<CompletedTask>) {
-        tasks = newList
+    fun updateTasks(newTasks: List<CompletedTask>) {
+        tasks = newTasks
         notifyDataSetChanged()
     }
 
@@ -36,7 +36,14 @@ class CompletedTaskAdapter(private var tasks: List<CompletedTask>) :
         holder.taskName.text = task.taskName
         holder.subjectName.text = "Subject: ${task.subjectName}"
         holder.completedDate.text = "Completed: ${task.dateCompleted}"
-        holder.image.setImageURI(Uri.parse(task.imageUri))
+
+        // Set image safely, fallback if URI invalid or null
+        val uri = Uri.parse(task.imageUri)
+        if (uri != null) {
+            holder.image.setImageURI(uri)
+        } else {
+            holder.image.setImageResource(android.R.drawable.ic_menu_report_image) // fallback icon
+        }
     }
 
     override fun getItemCount(): Int = tasks.size

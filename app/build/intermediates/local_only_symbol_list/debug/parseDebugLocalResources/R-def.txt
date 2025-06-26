@@ -11,6 +11,7 @@ drawable cup_fill
 drawable ic_add
 drawable ic_clock
 drawable ic_cup
+drawable ic_delete
 drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -22,6 +23,7 @@ id bottomNav
 id btnAddSubject
 id btnAddTask
 id btnDelete
+id btnDeleteTask
 id btnDueDate
 id btnEdit
 id btnLogin
@@ -34,11 +36,14 @@ id colorPreview
 id completedDate
 id completedImage
 id completedSubjectName
+id completedTaskHistoryFragment
 id completedTaskName
 id completedTasksRecycler
 id confirmationImage
 id cupFillContainer
 id cupImage
+id deleteButton
+id editButton
 id editSubjectName
 id fillView
 id homeFragment

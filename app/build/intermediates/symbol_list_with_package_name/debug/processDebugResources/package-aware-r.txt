@@ -3072,6 +3072,7 @@ drawable ic_clear_black_24
 drawable ic_clock
 drawable ic_clock_black_24dp
 drawable ic_cup
+drawable ic_delete
 drawable ic_home
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -3269,6 +3270,7 @@ id bounceStart
 id btnAddSubject
 id btnAddTask
 id btnDelete
+id btnDeleteTask
 id btnDueDate
 id btnEdit
 id btnLogin
@@ -3305,6 +3307,7 @@ id color_indicator
 id completedDate
 id completedImage
 id completedSubjectName
+id completedTaskHistoryFragment
 id completedTaskName
 id completedTasksRecycler
 id compose_view_saveable_id_tag
@@ -3333,6 +3336,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deleteButton
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3362,6 +3366,7 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editButton
 id editSubjectName
 id edit_query
 id edit_text_id

@@ -3,14 +3,15 @@
     android:orientation="horizontal"
     android:padding="10dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/completedImage"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:scaleType="centerCrop"
-        android:layout_marginEnd="10dp" />
+        android:layout_marginEnd="10dp"
+        android:contentDescription="Completed task image" />
 
     <LinearLayout
         android:orientation="vertical"

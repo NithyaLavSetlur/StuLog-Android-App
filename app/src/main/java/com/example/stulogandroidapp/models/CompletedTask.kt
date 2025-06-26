@@ -7,8 +7,9 @@ import androidx.room.PrimaryKey
 data class CompletedTask(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val taskName: String,
-    val subjectName: String,
-    val imageUri: String,
-    val dateCompleted: String
+
+    val taskName: String,           // Name of the completed task
+    val subjectName: String,        // Subject this task belongs to
+    val imageUri: String,           // URI of the uploaded image (local or external)
+    val dateCompleted: String       // Completion date (formatted as "dd/MM/yyyy")
 )

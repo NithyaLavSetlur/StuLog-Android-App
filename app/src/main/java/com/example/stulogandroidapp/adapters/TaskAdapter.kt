@@ -8,45 +8,51 @@ import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.example.stulogandroidapp.R
 import com.example.stulogandroidapp.database.AppDatabase
+import com.example.stulogandroidapp.models.CompletedTask
 import com.example.stulogandroidapp.models.Task
 import kotlinx.coroutines.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class TaskAdapter(
     private var tasks: List<Task>,
-    private val context: Context
+    private val context: Context,
+    private val onImageUploadRequest: (Task) -> Unit
 ) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
     private val db = AppDatabase.getDatabase(context)
+    private val selectedTasks = mutableSetOf<Task>()
+    private var deleteMode = false
+
+    fun enableDeleteMode(enabled: Boolean) {
+        deleteMode = enabled
+        selectedTasks.clear()
+        notifyDataSetChanged()
+    }
+
+    fun getSelectedTasks(): List<Task> = selectedTasks.toList()
 
     fun updateTasks(newTasks: List<Task>) {
         tasks = newTasks.sortedWith(compareBy({ it.completed }, { it.dueDate ?: "" }))
         notifyDataSetChanged()
     }
 
+    fun getCurrentTasks(): List<Task> = tasks
+
     inner class TaskViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val taskName: TextView = view.findViewById(R.id.taskName)
         val checkBox: CheckBox = view.findViewById(R.id.checkBoxTask)
 
         init {
+            // Handle clicks on the entire item view:
             view.setOnClickListener {
                 val task = tasks[adapterPosition]
-                val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_task_detail, null)
-
-                val nameText = dialogView.findViewById<TextView>(R.id.taskName)
-                val descriptionText = dialogView.findViewById<TextView>(R.id.taskDescription)
-                val weightText = dialogView.findViewById<TextView>(R.id.taskWeight)
-                val dueText = dialogView.findViewById<TextView>(R.id.taskDue)
-
-                nameText.text = task.name
-                descriptionText.text = "Description: ${task.description ?: "No description"}"
-                weightText.text = "Weight: ${task.weighting}"
-                dueText.text = "Due: ${task.dueDate ?: "No due date"}"
-
-                AlertDialog.Builder(context)
-                    .setTitle("Task Details")
-                    .setView(dialogView)
-                    .setPositiveButton("Close", null)
-                    .show()
+                if (deleteMode) {
+                    // Toggle checkbox in delete mode
+                    checkBox.isChecked = !checkBox.isChecked
+                } else {
+                    showTaskDetailDialog(task)
+                }
             }
         }
     }
@@ -60,10 +66,29 @@ class TaskAdapter(
         val task = tasks[position]
 
         holder.taskName.text = task.name
-        holder.checkBox.setOnCheckedChangeListener(null)
-        holder.checkBox.isChecked = task.completed
 
-        // Grey out completed tasks
+        // Remove previous listener before changing checked state
+        holder.checkBox.setOnCheckedChangeListener(null)
+
+        if (deleteMode) {
+            holder.checkBox.visibility = View.VISIBLE
+            holder.checkBox.isChecked = selectedTasks.contains(task)
+        } else {
+            holder.checkBox.visibility = View.VISIBLE
+            holder.checkBox.isChecked = task.completed
+        }
+
+        // Now attach listener AFTER setting isChecked!
+        holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
+            if (deleteMode) {
+                if (isChecked) selectedTasks.add(task) else selectedTasks.remove(task)
+            } else if (isChecked && !task.completed) {
+                // Trigger image upload callback
+                onImageUploadRequest(task)
+            }
+        }
+
+        // Visual styling for completed tasks
         if (task.completed) {
             holder.taskName.setTextColor(Color.GRAY)
             holder.taskName.paint.isStrikeThruText = true
@@ -71,40 +96,26 @@ class TaskAdapter(
             holder.taskName.setTextColor(Color.BLACK)
             holder.taskName.paint.isStrikeThruText = false
         }
-
-        holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked && !task.completed) {
-                showImageUploadDialog(task)
-            }
-        }
     }
 
     override fun getItemCount(): Int = tasks.size
 
-    private fun showImageUploadDialog(task: Task) {
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_upload_photo, null)
-        val imageView = dialogView.findViewById<ImageView>(R.id.confirmationImage)
-        var imageSelected = false
+    private fun showTaskDetailDialog(task: Task) {
+        val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_task_detail, null)
 
-        imageView.setOnClickListener {
-            Toast.makeText(context, "Replace with image picker", Toast.LENGTH_SHORT).show()
-            imageSelected = true // simulate image selection
-        }
+        dialogView.findViewById<TextView>(R.id.taskName).text = task.name
+        dialogView.findViewById<TextView>(R.id.taskDescription).text = "Description: ${task.description ?: "No description"}"
+        dialogView.findViewById<TextView>(R.id.taskWeight).text = "Weight: ${task.weighting}"
+        dialogView.findViewById<TextView>(R.id.taskDue).text = "Due: ${task.dueDate ?: "No due date"}"
 
         AlertDialog.Builder(context)
-            .setTitle("Upload Photo")
+            .setTitle("Task Details")
             .setView(dialogView)
-            .setPositiveButton("Confirm") { _, _ ->
-                if (imageSelected) {
-                    val updatedTask = task.copy(completed = true)
-                    CoroutineScope(Dispatchers.IO).launch {
-                        db.taskDao().update(updatedTask)
-                    }
-                } else {
-                    Toast.makeText(context, "You must upload at least one image", Toast.LENGTH_SHORT).show()
-                }
-            }
-            .setNegativeButton("Cancel", null)
+            .setPositiveButton("Close", null)
             .show()
+    }
+
+    private suspend fun getSubjectName(subjectId: Int): String {
+        return db.subjectDao().getSubjectById(subjectId).name
     }
 }
