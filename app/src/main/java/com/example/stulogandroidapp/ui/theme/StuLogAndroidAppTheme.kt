@@ -3,11 +3,12 @@ package com.example.stulogandroidapp.ui.theme
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 
-// Custom color values based on your palette
+// Your custom color values
 private val Plum = Color(0xFF66344C)
 private val Mauve = Color(0xFF664F69)
 private val LavenderGrey = Color(0xFF9A7B9A)
@@ -19,10 +20,10 @@ private val DarkColorScheme = darkColorScheme(
     onPrimary = Color.White,
     secondary = Mauve,
     onSecondary = Color.White,
-    background = Color(0xFF121212),      // Very dark background
-    onBackground = Color.White,          // White text on dark background
-    surface = LavenderGrey,              // Light purple surface
-    onSurface = Color.Black              // Black text on light surface
+    background = Color(0xFF121212),
+    onBackground = Color.White,
+    surface = LavenderGrey,
+    onSurface = Color.Black
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -30,10 +31,10 @@ private val LightColorScheme = lightColorScheme(
     onPrimary = Color.White,
     secondary = Mauve,
     onSecondary = Color.White,
-    background = Color(0xFFFFFFFF),      // Light background
-    onBackground = Color.Black,          // Black text on light background
-    surface = LilacPink,                 // Light pink surface
-    onSurface = Color.Black              // Black text on light surface
+    background = Color(0xFFFDF9FD),
+    onBackground = Color.Black,
+    surface = LilacPink,
+    onSurface = Color.Black
 )
 
 @Composable
@@ -55,6 +56,12 @@ fun StuLogAndroidAppTheme(
         colorScheme = colorScheme,
         typography = Typography,
         shapes = Shapes,
-        content = content
+        content = {
+            CompositionLocalProvider(
+                LocalTextStyle provides TextStyle(color = colorScheme.onSurface)
+            ) {
+                content()
+            }
+        }
     )
 }
