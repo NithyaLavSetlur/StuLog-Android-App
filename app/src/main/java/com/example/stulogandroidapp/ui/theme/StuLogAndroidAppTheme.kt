@@ -19,10 +19,10 @@ private val DarkColorScheme = darkColorScheme(
     onPrimary = Color.White,
     secondary = Mauve,
     onSecondary = Color.White,
-    background = Color(0xFF121212),
-    onBackground = Color.White,
-    surface = LavenderGrey,
-    onSurface = Color.Black
+    background = Color(0xFF121212),      // Very dark background
+    onBackground = Color.White,          // White text on dark background
+    surface = LavenderGrey,              // Light purple surface
+    onSurface = Color.Black              // Black text on light surface
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -30,10 +30,10 @@ private val LightColorScheme = lightColorScheme(
     onPrimary = Color.White,
     secondary = Mauve,
     onSecondary = Color.White,
-    background = Color(0xFFFDF9FD),
-    onBackground = Color.Black,
-    surface = LilacPink,
-    onSurface = Color.Black
+    background = Color(0xFFFFFFFF),      // Light background
+    onBackground = Color.Black,          // Black text on light background
+    surface = LilacPink,                 // Light pink surface
+    onSurface = Color.Black              // Black text on light surface
 )
 
 @Composable

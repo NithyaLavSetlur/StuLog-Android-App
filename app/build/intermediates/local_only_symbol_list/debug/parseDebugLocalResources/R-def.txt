@@ -17,6 +17,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_list
 drawable ic_stulog_logo
+id action_homeFragment_to_subjectTaskListFragment
 id action_subjectTaskListFragment_to_taskDetailFragment
 id addTaskFragment
 id bottomNav
@@ -43,6 +44,7 @@ id confirmationImage
 id cupFillContainer
 id cupImage
 id deleteButton
+id detailsButton
 id editButton
 id editSubjectName
 id fillView
@@ -52,12 +54,18 @@ id inputSubjectName
 id inputTaskDescription
 id inputTaskName
 id inputUsername
+id localTimeText
+id logButton
+id logContainer
 id logoImage
 id nav_graph
 id nav_host_fragment
 id pickImageButton
+id resetButton
 id rootWelcome
 id spinnerSubjects
+id startPauseButton
+id stopwatchText
 id subjectNameDisplay
 id subjectTaskListFragment
 id subjectViewPager
@@ -76,9 +84,9 @@ id taskName
 id taskTitle
 id taskWeight
 id taskWeightingSeek
-id textClock
 id tvSubjectName
 id txtSignUp
+id uploadReminderText
 id uploadTitle
 id weightingValue
 id welcomeText
@@ -99,6 +107,7 @@ layout fragment_completed_task_history
 layout fragment_home
 layout fragment_subject_task_list
 layout fragment_task_detail
+layout header
 layout item_completed_task
 layout item_cup
 layout item_task

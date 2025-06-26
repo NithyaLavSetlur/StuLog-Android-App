@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <LinearLayout
         android:padding="16dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+        <include layout="@layout/header" />
         <ImageView
             android:id="@+id/btnAddSubject"
             android:src="@android:drawable/ic_input_add"
@@ -57,6 +59,7 @@
             android:background="#E0E0E0" />
 
         <Button
+            android:id="@+id/detailsButton"
             android:text="Details →"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal">
+    <include layout="@layout/header" />
+
 
     <TextView
         android:text="Sign In"

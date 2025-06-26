@@ -7,6 +7,7 @@ import android.view.*
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.stulogandroidapp.R
 import com.example.stulogandroidapp.adapters.CupPagerAdapter
@@ -16,7 +17,6 @@ import com.example.stulogandroidapp.viewmodels.SubjectViewModel
 import com.flask.colorpicker.ColorPickerView
 import com.flask.colorpicker.builder.ColorPickerDialogBuilder
 import androidx.core.graphics.toColorInt
-import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -42,7 +42,6 @@ class HomeFragment : Fragment() {
         adapter = CupPagerAdapter(requireContext(), mutableListOf(), subjectViewModel)
         viewPager.adapter = adapter
 
-        // Update name when swiping between cups
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 if (currentSubjects.isNotEmpty()) {
@@ -51,12 +50,21 @@ class HomeFragment : Fragment() {
             }
         })
 
-        // Add subject button
         view.findViewById<ImageView>(R.id.btnAddSubject).setOnClickListener {
             showAddSubjectDialog()
         }
 
-        // Observe subject list for this user
+        view.findViewById<Button>(R.id.detailsButton).setOnClickListener {
+            val currentPosition = viewPager.currentItem
+            if (currentSubjects.isNotEmpty() && currentPosition < currentSubjects.size) {
+                val subjectId = currentSubjects[currentPosition].id
+                val action = HomeFragmentDirections.actionHomeFragmentToSubjectTaskListFragment(subjectId)
+                findNavController().navigate(action)
+            } else {
+                Toast.makeText(requireContext(), "No subject selected", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         if (loggedInUsername != null) {
             subjectViewModel.getSubjectsForUser(loggedInUsername!!).observe(viewLifecycleOwner) { subjects ->
                 currentSubjects = subjects

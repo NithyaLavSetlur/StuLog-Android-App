@@ -3224,6 +3224,7 @@ int id action_bar_title 0x7f08003b
 int id action_container 0x7f08003c
 int id action_context_bar 0x7f08003d
 int id action_divider 0x7f08003e
+int id action_homeFragment_to_subjectTaskListFragment 0x7f08024c
 int id action_image 0x7f08003f
 int id action_menu_divider 0x7f080040
 int id action_menu_presenter 0x7f080041
@@ -3343,6 +3344,7 @@ int id design_menu_item_action_area 0x7f0800b2
 int id design_menu_item_action_area_stub 0x7f0800b3
 int id design_menu_item_text 0x7f0800b4
 int id design_navigation_view 0x7f0800b5
+int id detailsButton 0x7f08024d
 int id dialog_button 0x7f0800b6
 int id dimensions 0x7f0800b7
 int id direct 0x7f0800b8
@@ -3448,7 +3450,10 @@ int id line3 0x7f08011b
 int id linear 0x7f08011c
 int id listMode 0x7f08011d
 int id list_item 0x7f08011e
+int id localTimeText 0x7f08024f
 int id locale 0x7f08011f
+int id logButton 0x7f080250
+int id logContainer 0x7f080251
 int id logoImage 0x7f080120
 int id ltr 0x7f080121
 int id m3_side_sheet 0x7f080122
@@ -3576,6 +3581,7 @@ int id radio 0x7f08019b
 int id ratio 0x7f08019c
 int id rectangles 0x7f08019d
 int id report_drawn 0x7f08019e
+int id resetButton 0x7f080252
 int id reverseSawtooth 0x7f08019f
 int id right 0x7f0801a0
 int id rightToLeft 0x7f0801a1
@@ -3640,11 +3646,13 @@ int id src_over 0x7f0801db
 int id standard 0x7f0801dc
 int id start 0x7f0801dd
 int id startHorizontal 0x7f0801de
+int id startPauseButton 0x7f080253
 int id startToEnd 0x7f0801df
 int id startVertical 0x7f0801e0
 int id staticLayout 0x7f0801e1
 int id staticPostLayout 0x7f0801e2
 int id stop 0x7f0801e3
+int id stopwatchText 0x7f080254
 int id stretch 0x7f0801e4
 int id subjectNameDisplay 0x7f0801e5
 int id subjectTaskListFragment 0x7f0801e6
@@ -3685,7 +3693,6 @@ int id taskWeight 0x7f080208
 int id taskWeightingSeek 0x7f080209
 int id text 0x7f08020a
 int id text2 0x7f08020b
-int id textClock 0x7f08020c
 int id textEnd 0x7f08020d
 int id textSpacerNoButtons 0x7f08020e
 int id textSpacerNoTitle 0x7f08020f
@@ -3725,6 +3732,7 @@ int id unchecked 0x7f080230
 int id uniform 0x7f080231
 int id unlabeled 0x7f080232
 int id up 0x7f080233
+int id uploadReminderText 0x7f08024e
 int id uploadTitle 0x7f080234
 int id useLogo 0x7f080235
 int id vertical_only 0x7f080236
@@ -3902,6 +3910,7 @@ int layout fragment_completed_task_history 0x7f0b003d
 int layout fragment_home 0x7f0b003e
 int layout fragment_subject_task_list 0x7f0b003f
 int layout fragment_task_detail 0x7f0b0040
+int layout header 0x7f0b0083
 int layout ime_base_split_test_activity 0x7f0b0041
 int layout ime_secondary_split_test_activity 0x7f0b0042
 int layout item_completed_task 0x7f0b0043

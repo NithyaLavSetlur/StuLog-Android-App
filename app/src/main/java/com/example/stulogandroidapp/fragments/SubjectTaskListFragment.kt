@@ -68,7 +68,13 @@ class SubjectTaskListFragment : Fragment() {
         editButton.setOnClickListener { promptSelectTaskToEdit() }
         deleteButton.setOnClickListener { handleDeleteModeToggle() }
 
-        showSubjectPopup()
+        selectedSubjectId = arguments?.getInt("subjectId") ?: -1
+        if (selectedSubjectId != -1) {
+            loadTasks(selectedSubjectId)
+        } else {
+            showSubjectPopup()
+        }
+
         return view
     }
 

@@ -9,6 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">StuLog Android App</string>
     <style name="Theme.StuLogAndroidApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
         
         <item name="colorPrimary">#66344C</item> 
         <item name="colorPrimaryVariant">#CA9CE1</item> 

@@ -4,6 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <include layout="@layout/header" />
+
 
     <!-- Top action row -->
     <LinearLayout
@@ -41,4 +43,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
+
+    <!-- Upload reminder text -->
+    <TextView
+        android:id="@+id/uploadReminderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="* You must upload an image as evidence to complete a task!"
+        android:textColor="@color/purple_500"
+        android:textStyle="italic"
+        android:paddingTop="8dp"
+        android:gravity="center"
+        android:textSize="14sp" />
+
 </LinearLayout>

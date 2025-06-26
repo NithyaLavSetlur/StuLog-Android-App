@@ -3225,6 +3225,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_homeFragment_to_subjectTaskListFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -3344,6 +3345,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detailsButton
 id dialog_button
 id dimensions
 id direct
@@ -3449,7 +3451,10 @@ id line3
 id linear
 id listMode
 id list_item
+id localTimeText
 id locale
+id logButton
+id logContainer
 id logoImage
 id ltr
 id m3_side_sheet
@@ -3577,6 +3582,7 @@ id radio
 id ratio
 id rectangles
 id report_drawn
+id resetButton
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3641,11 +3647,13 @@ id src_over
 id standard
 id start
 id startHorizontal
+id startPauseButton
 id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
 id stop
+id stopwatchText
 id stretch
 id subjectNameDisplay
 id subjectTaskListFragment
@@ -3686,7 +3694,6 @@ id taskWeight
 id taskWeightingSeek
 id text
 id text2
-id textClock
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
@@ -3726,6 +3733,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id uploadReminderText
 id uploadTitle
 id useLogo
 id vertical_only
@@ -3903,6 +3911,7 @@ layout fragment_completed_task_history
 layout fragment_home
 layout fragment_subject_task_list
 layout fragment_task_detail
+layout header
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_completed_task
