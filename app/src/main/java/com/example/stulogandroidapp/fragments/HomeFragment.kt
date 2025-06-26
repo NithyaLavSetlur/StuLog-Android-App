@@ -1,7 +1,7 @@
 package com.example.stulogandroidapp.fragments
 
 import android.app.AlertDialog
-import android.graphics.Color
+import android.content.Context
 import android.os.Bundle
 import android.view.*
 import android.widget.*
@@ -16,33 +16,61 @@ import com.example.stulogandroidapp.viewmodels.SubjectViewModel
 import com.flask.colorpicker.ColorPickerView
 import com.flask.colorpicker.builder.ColorPickerDialogBuilder
 import androidx.core.graphics.toColorInt
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
     private lateinit var viewPager: ViewPager2
     private lateinit var adapter: CupPagerAdapter
-    private lateinit var db: AppDatabase
     private lateinit var subjectViewModel: SubjectViewModel
+    private lateinit var subjectNameView: TextView
     private var selectedColor = "#FFA726".toColorInt()
+    private var loggedInUsername: String? = null
+    private var currentSubjects: List<Subject> = emptyList()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        db = AppDatabase.getDatabase(requireContext())
 
         subjectViewModel = ViewModelProvider(this)[SubjectViewModel::class.java]
 
+        val sharedPref = requireActivity().getSharedPreferences("StuLogPrefs", Context.MODE_PRIVATE)
+        loggedInUsername = sharedPref.getString("loggedInUsername", null)
+
         viewPager = view.findViewById(R.id.subjectViewPager)
+        subjectNameView = view.findViewById(R.id.subjectNameDisplay)
+
         adapter = CupPagerAdapter(requireContext(), mutableListOf(), subjectViewModel)
         viewPager.adapter = adapter
 
+        // Update name when swiping between cups
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                if (currentSubjects.isNotEmpty()) {
+                    subjectNameView.text = currentSubjects[position].name
+                }
+            }
+        })
+
+        // Add subject button
         view.findViewById<ImageView>(R.id.btnAddSubject).setOnClickListener {
             showAddSubjectDialog()
         }
 
-        subjectViewModel.subjects.observe(viewLifecycleOwner) {
-            adapter.updateSubjects(it)
-            view.findViewById<TextView>(R.id.subjectNameDisplay).text =
-                if (it.isEmpty()) "Press + to add a new Subject!" else it[viewPager.currentItem].name
+        // Observe subject list for this user
+        if (loggedInUsername != null) {
+            subjectViewModel.getSubjectsForUser(loggedInUsername!!).observe(viewLifecycleOwner) { subjects ->
+                currentSubjects = subjects
+                adapter.updateSubjects(subjects)
+
+                if (subjects.isEmpty()) {
+                    subjectNameView.text = "Press + to add a new Subject!"
+                } else {
+                    val currentIndex = viewPager.currentItem.coerceIn(0, subjects.lastIndex)
+                    subjectNameView.text = subjects[currentIndex].name
+                }
+            }
+        } else {
+            Toast.makeText(requireContext(), "No logged-in user found", Toast.LENGTH_SHORT).show()
         }
 
         return view
@@ -74,10 +102,13 @@ class HomeFragment : Fragment() {
             .setTitle("Add Subject")
             .setView(dialogView)
             .setPositiveButton("Add") { _, _ ->
-                val name = nameInput.text.toString()
-                if (name.isNotEmpty()) {
+                val subjectName = nameInput.text.toString()
+                if (subjectName.isNotEmpty() && loggedInUsername != null) {
                     val hexColor = String.format("#%06X", 0xFFFFFF and selectedColor)
-                    subjectViewModel.insert(Subject(name = name, color = hexColor))
+                    val newSubject = Subject(name = subjectName, color = hexColor, username = loggedInUsername!!)
+                    subjectViewModel.insert(newSubject)
+                } else {
+                    Toast.makeText(requireContext(), "Please enter a subject name", Toast.LENGTH_SHORT).show()
                 }
             }
             .setNegativeButton("Cancel", null)

@@ -6,14 +6,12 @@ import android.view.*
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.stulogandroidapp.R
 import com.example.stulogandroidapp.adapters.TaskAdapter
 import com.example.stulogandroidapp.database.AppDatabase
 import com.example.stulogandroidapp.models.Subject
-import com.example.stulogandroidapp.models.Task
 import kotlinx.coroutines.launch
 
 class SubjectTaskListFragment : Fragment() {
@@ -21,7 +19,6 @@ class SubjectTaskListFragment : Fragment() {
     private lateinit var db: AppDatabase
     private lateinit var taskListView: RecyclerView
     private lateinit var adapter: TaskAdapter
-//    private var tasks: List<Task> = listOf()
     private var subjects: List<Subject> = listOf()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -31,8 +28,9 @@ class SubjectTaskListFragment : Fragment() {
         taskListView.layoutManager = LinearLayoutManager(requireContext())
 
         adapter = TaskAdapter(emptyList()) { task ->
-            val action = SubjectTaskListFragmentDirections.actionSubjectTaskListFragmentToTaskDetailFragment(task.id)
-            findNavController().navigate(action)
+            val intent = android.content.Intent(requireContext(), com.example.stulogandroidapp.activities.TaskDetailActivity::class.java)
+            intent.putExtra("taskId", task.id)
+            startActivity(intent)
         }
         taskListView.adapter = adapter
 
@@ -42,7 +40,8 @@ class SubjectTaskListFragment : Fragment() {
 
     private fun showSubjectPopup() {
         lifecycleScope.launch {
-            subjects = db.subjectDao().getAllSubjects() as List<Subject>
+            // ✅ Correct call to get subjects (suspend function)
+            subjects = db.subjectDao().getAllSubjectsOnce()
             if (subjects.isEmpty()) return@launch
 
             val subjectNames = subjects.map { it.name }.toTypedArray()

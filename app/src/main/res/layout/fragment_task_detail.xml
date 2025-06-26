@@ -9,16 +9,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView android:id="@+id/taskDetailTitle" android:textSize="20sp" android:layout_height="match_parent" android:layout_width="match_parent"/>
-        <TextView android:id="@+id/taskDetailDesc" />
-        <TextView android:id="@+id/taskDetailDue" />
-        <TextView android:id="@+id/taskDetailWeight" />
+        <TextView
+            android:id="@+id/taskDetailTitle"
+            android:text="Task Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/taskDetailDesc"
+            android:text="Description: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/taskDetailDue"
+            android:text="Due Date: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/taskDetailWeight"
+            android:text="Weight: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp" />
 
         <Button
             android:id="@+id/btnMarkComplete"
             android:text="Mark as Complete"
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
     </LinearLayout>
 </ScrollView>

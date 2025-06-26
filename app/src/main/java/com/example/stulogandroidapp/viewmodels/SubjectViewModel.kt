@@ -8,8 +8,16 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class SubjectViewModel(application: Application) : AndroidViewModel(application) {
+
     private val subjectDao = AppDatabase.getDatabase(application).subjectDao()
-    val subjects: LiveData<List<Subject>> = subjectDao.getAllSubjects()
+
+    // Remove this, it no longer works:
+    // val subjects: LiveData<List<Subject>> = subjectDao.getAllSubjects()
+
+    // ✅ Replace with this method
+    fun getSubjectsForUser(username: String): LiveData<List<Subject>> {
+        return subjectDao.getSubjectsByUsername(username)
+    }
 
     fun insert(subject: Subject) = viewModelScope.launch(Dispatchers.IO) {
         subjectDao.insert(subject)

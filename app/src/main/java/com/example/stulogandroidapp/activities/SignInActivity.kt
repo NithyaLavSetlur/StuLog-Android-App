@@ -30,11 +30,19 @@ class SignInActivity : AppCompatActivity() {
 
             val user = db.userDao().authenticate(username, password)
             if (user != null) {
+                // Save logged-in username to SharedPreferences
+                val sharedPref = getSharedPreferences("StuLogPrefs", MODE_PRIVATE)
+                with(sharedPref.edit()) {
+                    putString("loggedInUsername", user.username)
+                    apply()
+                }
+
                 startActivity(Intent(this, HomeActivity::class.java))
                 finish()
             } else {
                 Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
             }
+
         }
 
         txtSignUp.setOnClickListener {

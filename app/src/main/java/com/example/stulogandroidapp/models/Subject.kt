@@ -7,5 +7,7 @@ import androidx.room.PrimaryKey
 data class Subject(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val name: String,
-    val color: String // Stored as hex color string like "#FF5722"
+    val color: String,
+    val username: String // NEW FIELD to link subject to a user
 )
+
