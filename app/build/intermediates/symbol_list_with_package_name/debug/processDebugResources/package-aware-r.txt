@@ -3054,6 +3054,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cup_fill
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3287,6 +3288,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id checkBoxTask
 id checkbox
 id checked
 id chronometer
@@ -3320,6 +3322,7 @@ id coordinator
 id cos
 id counterclockwise
 id cradle
+id cupFillContainer
 id cupImage
 id currentState
 id custom
@@ -3373,6 +3376,7 @@ id expand_activities_button
 id expanded_menu
 id fade
 id fill
+id fillView
 id fill_horizontal
 id fill_vertical
 id filled
@@ -3667,11 +3671,13 @@ id taskDetailDue
 id taskDetailFragment
 id taskDetailTitle
 id taskDetailWeight
+id taskDue
 id taskDueDate
 id taskListFragment
 id taskListRecycler
 id taskName
 id taskTitle
+id taskWeight
 id taskWeightingSeek
 id text
 id text2
@@ -3709,11 +3715,13 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvSubjectName
 id txtSignUp
 id unchecked
 id uniform
 id unlabeled
 id up
+id uploadTitle
 id useLogo
 id vertical_only
 id view_offset_helper
@@ -3882,6 +3890,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_add_subject
 layout dialog_edit_subject
+layout dialog_task_detail
 layout dialog_upload_photo
 layout fragment_add_task
 layout fragment_clock

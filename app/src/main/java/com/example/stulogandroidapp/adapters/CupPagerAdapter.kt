@@ -1,17 +1,21 @@
 package com.example.stulogandroidapp.adapters
 
+import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
+import android.util.Log
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.example.stulogandroidapp.R
+import com.example.stulogandroidapp.database.AppDatabase
 import com.example.stulogandroidapp.models.Subject
 import com.example.stulogandroidapp.viewmodels.SubjectViewModel
 import com.flask.colorpicker.ColorPickerView
 import com.flask.colorpicker.builder.ColorPickerDialogBuilder
+import kotlinx.coroutines.*
 
 class CupPagerAdapter(
     private val context: Context,
@@ -19,16 +23,14 @@ class CupPagerAdapter(
     private val subjectViewModel: SubjectViewModel
 ) : RecyclerView.Adapter<CupPagerAdapter.CupViewHolder>() {
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun updateSubjects(newSubjects: List<Subject>) {
-        subjects = newSubjects.toMutableList()
-        notifyDataSetChanged()
-    }
+    private val db = AppDatabase.getDatabase(context)
 
     inner class CupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val cupImage: ImageView = view.findViewById(R.id.cupImage)
-        val btnDelete: ImageButton = view.findViewById(R.id.btnDelete)
+        val fillView: View = view.findViewById(R.id.fillView)
+        val subjectNameText: TextView = view.findViewById(R.id.tvSubjectName)
         val btnEdit: ImageButton = view.findViewById(R.id.btnEdit)
+        val btnDelete: ImageButton = view.findViewById(R.id.btnDelete)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CupViewHolder {
@@ -38,12 +40,56 @@ class CupPagerAdapter(
 
     override fun onBindViewHolder(holder: CupViewHolder, position: Int) {
         val subject = subjects[position]
-        holder.cupImage.setColorFilter(Color.parseColor(subject.color))
 
+        holder.subjectNameText.text = subject.name
+        holder.cupImage.setColorFilter(null)
+
+        // Reset fill to zero before animation
+        holder.fillView.layoutParams.height = 0
+        holder.fillView.requestLayout()
+
+        // Set fill color to match subject
+        try {
+            holder.fillView.setBackgroundColor(Color.parseColor(subject.color))
+        } catch (e: Exception) {
+            holder.fillView.setBackgroundColor(Color.parseColor("#FF8A65"))
+        }
+
+        // Animate cup fill based on completed task weight
+        GlobalScope.launch(Dispatchers.IO) {
+            try {
+                val tasks = db.taskDao().getTasksBySubjectOnce(subject.id)
+                val totalWeight = tasks.sumOf { it.weighting }
+                val completedWeight = tasks.filter { it.completed }.sumOf { it.weighting }
+                val progressPercent = if (totalWeight == 0) 0 else (completedWeight * 100 / totalWeight)
+
+                withContext(Dispatchers.Main) {
+                    // Animate fill height
+                    holder.itemView.post {
+                        val maxHeight = holder.itemView.height
+                        val targetHeight = maxHeight * progressPercent / 100
+
+                        val animator = ValueAnimator.ofInt(0, targetHeight)
+                        animator.duration = 700
+                        animator.addUpdateListener {
+                            val value = it.animatedValue as Int
+                            holder.fillView.layoutParams.height = value
+                            holder.fillView.requestLayout()
+                        }
+                        animator.start()
+                    }
+                }
+            } catch (e: Exception) {
+                Log.e("CupAdapter", "Error animating cup fill", e)
+            }
+        }
+
+        // Delete subject
         holder.btnDelete.setOnClickListener {
             subjectViewModel.delete(subject)
         }
 
+        // Edit subject
         holder.btnEdit.setOnClickListener {
             val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_edit_subject, null)
             val inputName = dialogView.findViewById<EditText>(R.id.editSubjectName)
@@ -86,4 +132,10 @@ class CupPagerAdapter(
     }
 
     override fun getItemCount(): Int = subjects.size
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateSubjects(newSubjects: List<Subject>) {
+        subjects = newSubjects.toMutableList()
+        notifyDataSetChanged()
+    }
 }

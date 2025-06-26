@@ -11,6 +11,9 @@ interface TaskDao {
     @Query("SELECT * FROM tasks WHERE subjectId = :subjectId ORDER BY dueDate ASC")
     fun getTasksBySubject(subjectId: Int): LiveData<List<Task>>
 
+    @Query("SELECT * FROM tasks WHERE subjectId = :subjectId")
+    suspend fun getTasksBySubjectOnce(subjectId: Int): List<Task>
+
     // For TaskDetailFragment
     @Query("SELECT * FROM tasks WHERE id = :taskId")
     suspend fun getTaskById(taskId: Int): Task

@@ -27,11 +27,8 @@ class SubjectTaskListFragment : Fragment() {
         taskListView = view.findViewById(R.id.taskListRecycler)
         taskListView.layoutManager = LinearLayoutManager(requireContext())
 
-        adapter = TaskAdapter(emptyList()) { task ->
-            val intent = android.content.Intent(requireContext(), com.example.stulogandroidapp.activities.TaskDetailActivity::class.java)
-            intent.putExtra("taskId", task.id)
-            startActivity(intent)
-        }
+        // ✅ Pass context instead of lambda
+        adapter = TaskAdapter(emptyList(), requireContext())
         taskListView.adapter = adapter
 
         showSubjectPopup()
@@ -40,7 +37,6 @@ class SubjectTaskListFragment : Fragment() {
 
     private fun showSubjectPopup() {
         lifecycleScope.launch {
-            // ✅ Correct call to get subjects (suspend function)
             subjects = db.subjectDao().getAllSubjectsOnce()
             if (subjects.isEmpty()) return@launch
 

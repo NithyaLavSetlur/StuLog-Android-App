@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="250dp"
-    android:layout_height="250dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_margin="16dp">
 
-    <!-- Fill Progress Bar -->
-    <ProgressBar
-        android:id="@+id/cupProgressBar"
-        style="@android:style/Widget.ProgressBar.Vertical"
+    <!-- Fill container -->
+    <FrameLayout
+        android:id="@+id/cupFillContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:max="100"
-        android:progress="0"
-        android:indeterminate="false"
-        android:progressDrawable="@drawable/cup_fill"
-        android:layout_gravity="bottom" />
+        android:layout_height="match_parent">
+
+        <!-- Fill rectangle that "rises" -->
+        <View
+            android:id="@+id/fillView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:background="#FF8A65" />
+    </FrameLayout>
 
     <!-- Cup Image Overlay -->
     <ImageView

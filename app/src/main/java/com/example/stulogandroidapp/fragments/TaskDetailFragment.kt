@@ -61,7 +61,7 @@ class TaskDetailFragment : Fragment() {
 
     private fun showImageUploadDialog() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_upload_photo, null)
-        val imageView = dialogView.findViewById<ImageView>(R.id.confirmationImage)
+        val imageView = dialogView.findViewById<ImageView>(R.id.confirmationImage) // FIXED ID ✅
         val pickButton = dialogView.findViewById<Button>(R.id.pickImageButton)
 
         pickButton.setOnClickListener {
@@ -96,6 +96,7 @@ class TaskDetailFragment : Fragment() {
             .setNegativeButton("Cancel", null)
             .show()
     }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == IMAGE_PICK_CODE && resultCode == Activity.RESULT_OK) {

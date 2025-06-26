@@ -3053,6 +3053,7 @@ int drawable btn_radio_off_mtrl 0x7f07007d
 int drawable btn_radio_off_to_on_mtrl_animation 0x7f07007e
 int drawable btn_radio_on_mtrl 0x7f07007f
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f070080
+int drawable cup_fill 0x7f0700eb
 int drawable design_fab_background 0x7f070081
 int drawable design_ic_visibility 0x7f070082
 int drawable design_ic_visibility_off 0x7f070083
@@ -3286,6 +3287,7 @@ int id center_vertical 0x7f08007b
 int id chain 0x7f08007c
 int id chain2 0x7f08007d
 int id chains 0x7f08007e
+int id checkBoxTask 0x7f080245
 int id checkbox 0x7f08007f
 int id checked 0x7f080080
 int id chronometer 0x7f080081
@@ -3319,6 +3321,7 @@ int id coordinator 0x7f08009c
 int id cos 0x7f08009d
 int id counterclockwise 0x7f08009e
 int id cradle 0x7f08009f
+int id cupFillContainer 0x7f080243
 int id cupImage 0x7f0800a0
 int id currentState 0x7f0800a1
 int id custom 0x7f0800a2
@@ -3372,6 +3375,7 @@ int id expand_activities_button 0x7f0800d1
 int id expanded_menu 0x7f0800d2
 int id fade 0x7f0800d3
 int id fill 0x7f0800d4
+int id fillView 0x7f080244
 int id fill_horizontal 0x7f0800d5
 int id fill_vertical 0x7f0800d6
 int id filled 0x7f0800d7
@@ -3666,11 +3670,13 @@ int id taskDetailDue 0x7f0801f7
 int id taskDetailFragment 0x7f0801f8
 int id taskDetailTitle 0x7f0801f9
 int id taskDetailWeight 0x7f0801fa
+int id taskDue 0x7f080247
 int id taskDueDate 0x7f0801fb
 int id taskListFragment 0x7f0801fc
 int id taskListRecycler 0x7f0801fd
 int id taskName 0x7f0801fe
 int id taskTitle 0x7f0801ff
+int id taskWeight 0x7f080248
 int id taskWeightingSeek 0x7f080200
 int id text 0x7f080201
 int id text2 0x7f080202
@@ -3708,11 +3714,13 @@ int id transition_position 0x7f080221
 int id transition_scene_layoutid_cache 0x7f080222
 int id transition_transform 0x7f080223
 int id triangle 0x7f080224
+int id tvSubjectName 0x7f080242
 int id txtSignUp 0x7f080225
 int id unchecked 0x7f080226
 int id uniform 0x7f080227
 int id unlabeled 0x7f080228
 int id up 0x7f080229
+int id uploadTitle 0x7f080249
 int id useLogo 0x7f08022a
 int id vertical_only 0x7f08022b
 int id view_offset_helper 0x7f08022c
@@ -3881,6 +3889,7 @@ int layout design_text_input_end_icon 0x7f0b0035
 int layout design_text_input_start_icon 0x7f0b0036
 int layout dialog_add_subject 0x7f0b0037
 int layout dialog_edit_subject 0x7f0b0038
+int layout dialog_task_detail 0x7f0b0082
 int layout dialog_upload_photo 0x7f0b0039
 int layout fragment_add_task 0x7f0b003a
 int layout fragment_clock 0x7f0b003b

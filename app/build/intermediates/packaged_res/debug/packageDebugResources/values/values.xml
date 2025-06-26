@@ -10,17 +10,17 @@
     <string name="app_name">StuLog Android App</string>
     <style name="Theme.StuLogAndroidApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
-        <item name="colorPrimary">#3F51B5</item> 
-        <item name="colorPrimaryVariant">#303F9F</item> 
+        <item name="colorPrimary">#66344C</item> 
+        <item name="colorPrimaryVariant">#CA9CE1</item> 
         <item name="colorOnPrimary">#FFFFFF</item>
 
         
-        <item name="colorSecondary">#03DAC6</item> 
-        <item name="colorOnSecondary">#000000</item>
+        <item name="colorSecondary">#664F69</item> 
+        <item name="colorOnSecondary">#FFFFFF</item>
 
         
-        <item name="android:windowBackground">#F6F6F6</item>
-        <item name="colorSurface">#FFFFFF</item>
+        <item name="android:windowBackground">#FDF9FD</item> 
+        <item name="colorSurface">#9A7B9A</item> 
         <item name="colorOnSurface">#000000</item>
 
         
