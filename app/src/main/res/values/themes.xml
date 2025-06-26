@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.StuLogAndroidApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+    <style name="Theme.StuLogAndroidApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary branding color -->
-        <item name="colorPrimary">#3F51B5</item> <!-- Indigo 500 -->
-        <item name="colorPrimaryVariant">#303F9F</item> <!-- Indigo 700 -->
+        <item name="colorPrimary">#66344C</item> <!-- Deep Plum -->
+        <item name="colorPrimaryVariant">#CA9CE1</item> <!-- Pastel Purple -->
         <item name="colorOnPrimary">#FFFFFF</item>
 
         <!-- Secondary / Accent color -->
-        <item name="colorSecondary">#03DAC6</item> <!-- Teal 200 -->
-        <item name="colorOnSecondary">#000000</item>
+        <item name="colorSecondary">#664F69</item> <!-- Muted Mauve -->
+        <item name="colorOnSecondary">#FFFFFF</item>
 
         <!-- Backgrounds and surfaces -->
-        <item name="android:windowBackground">#F6F6F6</item>
-        <item name="colorSurface">#FFFFFF</item>
+        <item name="android:windowBackground">#FDF9FD</item> <!-- Soft lilac -->
+        <item name="colorSurface">#9A7B9A</item> <!-- Lavender Grey -->
         <item name="colorOnSurface">#000000</item>
 
         <!-- Text and icon colors -->
@@ -21,4 +23,6 @@
         <!-- Use Material Components style -->
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
     </style>
+
 </resources>
+

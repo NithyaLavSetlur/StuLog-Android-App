@@ -1,30 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="250dp"
-    android:layout_height="match_parent"
+    android:layout_height="250dp"
     android:layout_margin="16dp">
 
+    <!-- Fill Progress Bar -->
+    <ProgressBar
+        android:id="@+id/cupProgressBar"
+        style="@android:style/Widget.ProgressBar.Vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:max="100"
+        android:progress="0"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/cup_fill"
+        android:layout_gravity="bottom" />
+
+    <!-- Cup Image Overlay -->
     <ImageView
         android:id="@+id/cupImage"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:src="@drawable/ic_cup"
         android:scaleType="fitCenter" />
 
-    <ImageButton
-        android:id="@+id/btnDelete"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp"
-        android:background="@android:color/transparent"
-        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+    <!-- Subject Name -->
+    <TextView
+        android:id="@+id/tvSubjectName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="center"
+        android:text="Subject"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:padding="6dp"
+        android:background="#DDFFFFFF" />
 
-    <ImageButton
-        android:id="@+id/btnEdit"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:background="@android:color/transparent"
-        android:src="@android:drawable/ic_menu_edit" />
-</RelativeLayout>
+    <!-- Edit/Delete Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:background="#AAFFFFFF">
+
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_edit"
+            android:background="@android:color/transparent"
+            android:contentDescription="Edit" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/transparent"
+            android:contentDescription="Delete" />
+    </LinearLayout>
+</FrameLayout>
